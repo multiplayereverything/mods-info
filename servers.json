@@ -4,9 +4,8 @@
     {
       "id": "main",
       "name": "Main server",
-      "address": "",
-      "status": "offline",
-      "notice": "The central server isn't live yet. Use LAN or a direct address for now."
+      "address": "195.60.166.57:25569",
+      "status": "online"
     }
   ]
 }
