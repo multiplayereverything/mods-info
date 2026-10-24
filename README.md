@@ -9,7 +9,6 @@ the "update available" message, and notices. A server move is one edit to `serve
 | Mod | Game | Relay id | Mode | Players | Latest | Status |
 |---|---|---|---|---|---|---|
 | Baldi Together | Baldi's Basics Plus (Steam) | [`baldi`](mods/baldi.json) | tunnel | 4 | 0.8.3 | testing |
-| Darkwood Together | Darkwood (Steam) | [`darkwood`](mods/darkwood.json) | tunnel | 4 | 0.1.0 | planned |
 | Gun Mayhem 2 Online | Gun Mayhem 2: More Mayhem (Flash, Flashpoint) | [`gm2`](mods/gm2.json) | star | 4 | 1 | in-progress |
 | Stealth Hunter 2 Online | Stealth Hunter 2 (Flash, Flashpoint) | [`sh2`](mods/sh2.json) | star | 4 | 7 | in-progress |
 | Spooky Together | Spooky's Jump Scare Mansion: HD Renovation (Steam) | [`spooky`](mods/spooky.json) | tunnel | 4 | 0.2.6 | testing |
