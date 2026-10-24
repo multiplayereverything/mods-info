@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "spooky",
+  "name": "Spooky Together",
+  "game": "Spooky's Jump Scare Mansion: HD Renovation (Steam)",
+  "engine": "Unity 2021.3 Mono, BepInEx 5 or MelonLoader",
+  "status": "testing",
+  "latest_version": "0.2.6",
+  "min_version": "0.2.6",
+  "protocol": "0.2.6/7",
+  "download_url": "",
+  "changelog_url": "",
+  "relay": { "mode": "tunnel", "max_players": 4, "server": "main" },
+  "notice": "",
+  "updated": "2026-10-24"
+}

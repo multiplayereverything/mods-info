@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "sh2",
+  "name": "Stealth Hunter 2 Online",
+  "game": "Stealth Hunter 2 (Flash, Flashpoint)",
+  "engine": "Flash AVM2, Ruffle 0.7.1 or Flash Player 32",
+  "status": "in-progress",
+  "latest_version": "7",
+  "min_version": "7",
+  "protocol": "sh2net-7",
+  "download_url": "",
+  "changelog_url": "",
+  "relay": { "mode": "star", "max_players": 4, "server": "main" },
+  "notice": "",
+  "updated": "2026-10-24"
+}

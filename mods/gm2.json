@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "gm2",
+  "name": "Gun Mayhem 2 Online",
+  "game": "Gun Mayhem 2: More Mayhem (Flash, Flashpoint)",
+  "engine": "Flash AVM1 (AS2), Ruffle or Flash Player 32",
+  "status": "in-progress",
+  "latest_version": "1",
+  "min_version": "1",
+  "protocol": "gm2net-1",
+  "download_url": "",
+  "changelog_url": "",
+  "relay": { "mode": "star", "max_players": 4, "server": "main" },
+  "notice": "",
+  "updated": "2026-10-24"
+}

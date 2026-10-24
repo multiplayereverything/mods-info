@@ -1,0 +1,80 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/multiplayereverything/mods-info/main/schema.json",
+  "title": "mods-info",
+  "description": "Files the mods download at runtime. tools/validate.py checks every file against these rules.",
+  "$defs": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]{0,31}$" },
+    "version": { "type": "string", "pattern": "^[0-9]+(\\.[0-9]+){0,3}$" },
+    "address": { "type": "string", "pattern": "^$|^[A-Za-z0-9.-]{1,253}:[0-9]{1,5}$" },
+    "url": { "type": "string", "pattern": "^$|^https://" },
+    "text": { "type": "string", "maxLength": 200 },
+    "servers": {
+      "type": "object",
+      "required": ["schema", "servers"],
+      "properties": {
+        "schema": { "const": 1 },
+        "servers": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "required": ["id", "name", "address", "status"],
+            "properties": {
+              "id": { "$ref": "#/$defs/id" },
+              "name": { "$ref": "#/$defs/text" },
+              "address": { "$ref": "#/$defs/address", "description": "host:port of relay.py; empty = not set" },
+              "status": { "enum": ["online", "offline", "maintenance"] },
+              "notice": { "$ref": "#/$defs/text" }
+            }
+          }
+        }
+      }
+    },
+    "mod": {
+      "type": "object",
+      "required": ["schema", "id", "name", "game", "engine", "status", "latest_version", "min_version",
+                   "protocol", "download_url", "changelog_url", "relay", "notice", "updated"],
+      "properties": {
+        "schema": { "const": 1 },
+        "id": { "$ref": "#/$defs/id", "description": "the relay game id; the file is mods/<id>.json" },
+        "name": { "$ref": "#/$defs/text" },
+        "game": { "$ref": "#/$defs/text" },
+        "engine": { "$ref": "#/$defs/text" },
+        "status": { "enum": ["planned", "in-progress", "testing", "released"] },
+        "latest_version": { "$ref": "#/$defs/version" },
+        "min_version": { "$ref": "#/$defs/version", "description": "older builds can't play online; never above latest_version" },
+        "protocol": { "$ref": "#/$defs/text", "description": "the version string the mod sends to the relay" },
+        "download_url": { "$ref": "#/$defs/url" },
+        "changelog_url": { "$ref": "#/$defs/url" },
+        "relay": {
+          "type": "object",
+          "required": ["mode", "max_players", "server"],
+          "properties": {
+            "mode": { "enum": ["star", "tunnel"] },
+            "max_players": { "type": "integer", "minimum": 2, "maximum": 16 },
+            "server": { "$ref": "#/$defs/id", "description": "an id in servers.json" },
+            "address": { "$ref": "#/$defs/address", "description": "optional: overrides the server's address for this mod" }
+          }
+        },
+        "notice": { "$ref": "#/$defs/text" },
+        "updated": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" }
+      }
+    },
+    "index": {
+      "type": "object",
+      "required": ["schema", "mods"],
+      "properties": {
+        "schema": { "const": 1 },
+        "mods": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "name", "file"],
+            "properties": { "id": { "$ref": "#/$defs/id" }, "name": { "$ref": "#/$defs/text" }, "file": { "type": "string" } }
+          }
+        }
+      }
+    }
+  }
+}

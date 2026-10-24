@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "baldi",
+  "name": "Baldi Together",
+  "game": "Baldi's Basics Plus (Steam)",
+  "engine": "Unity, BepInEx 5 or MelonLoader",
+  "status": "testing",
+  "latest_version": "0.8.3",
+  "min_version": "0.8.3",
+  "protocol": "0.8.3/13",
+  "download_url": "",
+  "changelog_url": "",
+  "relay": { "mode": "tunnel", "max_players": 4, "server": "main" },
+  "notice": "",
+  "updated": "2026-10-24"
+}
