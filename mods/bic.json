@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "bic",
+  "name": "Bad Ice-Cream Online",
+  "game": "Bad Ice-Cream (Nitrome, Flash)",
+  "engine": "Flash AVM2, Ruffle or Flash Player 32",
+  "status": "in-progress",
+  "latest_version": "1",
+  "min_version": "1",
+  "protocol": "bic-1",
+  "download_url": "",
+  "changelog_url": "",
+  "relay": { "mode": "star", "max_players": 2, "server": "main" },
+  "notice": "",
+  "updated": "2026-10-25"
+}
