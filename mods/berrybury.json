@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "berrybury",
+  "name": "Berry Bury Berry Co-op",
+  "game": "Berry Bury Berry (Steam)",
+  "engine": "Unity 6000.2 Mono, BepInEx 5",
+  "status": "testing",
+  "latest_version": "0.1.0",
+  "min_version": "0.1.0",
+  "protocol": "0.1.0/1",
+  "download_url": "",
+  "changelog_url": "",
+  "relay": { "mode": "tunnel", "max_players": 4, "server": "main" },
+  "notice": "",
+  "updated": "2026-10-25"
+}

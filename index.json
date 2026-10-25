@@ -7,6 +7,11 @@
       "file": "mods/baldi.json"
     },
     {
+      "id": "berrybury",
+      "name": "Berry Bury Berry Co-op",
+      "file": "mods/berrybury.json"
+    },
+    {
       "id": "bic",
       "name": "Bad Ice-Cream Online",
       "file": "mods/bic.json"
