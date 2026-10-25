@@ -69,3 +69,12 @@ Every new multiplayer mod gets a file here, in the same format:
 ## Rules
 This repo is public: no tokens or keys, no game files, no decompiled code, no private addresses or local paths.
 Run `python tools/validate.py --check` before every push.
+
+## Made with
+
+This project was made with the help of these tools:
+
+- [antislop-ui](https://github.com/miqdadbadjuber/anti-slop/tree/main/skills/antislop-ui)
+- [coop-anything](https://github.com/cranebeaker/coop-anything)
+- [REA](https://github.com/morluto/rea)
+- [Universal Modder](https://github.com/rehan-remade/universal-modder)
