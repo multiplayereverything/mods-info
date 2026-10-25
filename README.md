@@ -11,7 +11,7 @@ Questions, bugs, or looking for people to play with? Join the [Multiplayer Every
 | Mod | Game | Relay id | Mode | Players | Latest | Status |
 |---|---|---|---|---|---|---|
 | Baldi Together | Baldi's Basics Plus (Steam) | [`baldi`](mods/baldi.json) | tunnel | 4 | 0.8.3 | testing |
-| Berry Bury Berry Co-op | Berry Bury Berry (Steam) | [`berrybury`](mods/berrybury.json) | tunnel | 4 | 0.1.0 | testing |
+| Berry Bury Berry Co-op | Berry Bury Berry (Steam) | [`berrybury`](mods/berrybury.json) | tunnel | 4 | 0.1.1 | testing |
 | Bad Ice-Cream Online | Bad Ice-Cream (Nitrome, Flash) | [`bic`](mods/bic.json) | star | 2 | 1 | in-progress |
 | Gun Mayhem 2 Online | Gun Mayhem 2: More Mayhem (Flash, Flashpoint) | [`gm2`](mods/gm2.json) | star | 4 | 1 | in-progress |
 | Stealth Hunter 2 Online | Stealth Hunter 2 (Flash, Flashpoint) | [`sh2`](mods/sh2.json) | star | 4 | 7 | in-progress |
