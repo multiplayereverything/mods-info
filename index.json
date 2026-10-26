@@ -2,16 +2,6 @@
   "schema": 1,
   "mods": [
     {
-      "id": "baldi",
-      "name": "Baldi Together",
-      "file": "mods/baldi.json"
-    },
-    {
-      "id": "berrybury",
-      "name": "Berry Bury Berry Co-op",
-      "file": "mods/berrybury.json"
-    },
-    {
       "id": "bic",
       "name": "Bad Ice-Cream Online",
       "file": "mods/bic.json"
@@ -25,11 +15,6 @@
       "id": "sh2",
       "name": "Stealth Hunter 2 Online",
       "file": "mods/sh2.json"
-    },
-    {
-      "id": "spooky",
-      "name": "Spooky Together",
-      "file": "mods/spooky.json"
     }
   ]
 }
