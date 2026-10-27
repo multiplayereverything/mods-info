@@ -2,14 +2,29 @@
   "schema": 1,
   "mods": [
     {
+      "id": "airbattle",
+      "name": "Air Battle Online",
+      "file": "mods/airbattle.json"
+    },
+    {
       "id": "bic",
       "name": "Bad Ice-Cream Online",
       "file": "mods/bic.json"
     },
     {
+      "id": "bowman",
+      "name": "Bow Man Online",
+      "file": "mods/bowman.json"
+    },
+    {
       "id": "gm2",
       "name": "Gun Mayhem 2 Online",
       "file": "mods/gm2.json"
+    },
+    {
+      "id": "pb2",
+      "name": "Plazma Burst 2 Campaign Co-op",
+      "file": "mods/pb2.json"
     },
     {
       "id": "sh2",

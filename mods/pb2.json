@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "pb2",
+  "name": "Plazma Burst 2 Campaign Co-op",
+  "game": "Plazma Burst 2 (HTML5 build, itch.io)",
+  "engine": "HTML5/JavaScript in the browser, Node.js co-op server",
+  "status": "testing",
+  "latest_version": "0.3.0",
+  "min_version": "0.3.0",
+  "protocol": "0.3.0",
+  "download_url": "",
+  "changelog_url": "",
+  "relay": { "mode": "tunnel", "max_players": 16, "server": "main" },
+  "notice": "",
+  "updated": "2026-10-27"
+}
