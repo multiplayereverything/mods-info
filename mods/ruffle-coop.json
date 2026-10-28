@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "ruffle-coop",
+  "name": "Ruffle Together",
+  "game": "Local-multiplayer Flash games (first: Bad Ice-Cream)",
+  "engine": "Ruffle fork (ruffle-coop), lockstep input sync",
+  "status": "testing",
+  "latest_version": "0.7.1",
+  "min_version": "0.7.1",
+  "protocol": "rc-0.7.1",
+  "download_url": "",
+  "changelog_url": "",
+  "relay": { "mode": "star", "max_players": 4, "server": "main" },
+  "notice": "",
+  "updated": "2026-10-28"
+}

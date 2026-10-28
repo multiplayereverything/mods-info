@@ -32,6 +32,11 @@
       "file": "mods/raftwars.json"
     },
     {
+      "id": "ruffle-coop",
+      "name": "Ruffle Together",
+      "file": "mods/ruffle-coop.json"
+    },
+    {
       "id": "sh2",
       "name": "Stealth Hunter 2 Online",
       "file": "mods/sh2.json"
