@@ -1,0 +1,20 @@
+{
+  "schema": 1,
+  "id": "ua3",
+  "name": "Ultimate Assassin 3 Online",
+  "game": "Ultimate Assassin 3 (Flash, Games121)",
+  "engine": "Flash AS3 (MochiCrypt-wrapped), FFDec-patched SWF",
+  "status": "testing",
+  "latest_version": "1.0.1",
+  "min_version": "1.0.0",
+  "protocol": "ua3-1",
+  "download_url": "",
+  "changelog_url": "",
+  "relay": {
+    "mode": "star",
+    "max_players": 4,
+    "server": "main"
+  },
+  "notice": "",
+  "updated": "2026-10-28"
+}

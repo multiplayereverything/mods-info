@@ -27,9 +27,34 @@
       "file": "mods/pb2.json"
     },
     {
+      "id": "raftwars",
+      "name": "Raft Wars Online",
+      "file": "mods/raftwars.json"
+    },
+    {
       "id": "sh2",
       "name": "Stealth Hunter 2 Online",
       "file": "mods/sh2.json"
+    },
+    {
+      "id": "stealthassassin",
+      "name": "Stealth Assassin Online",
+      "file": "mods/stealthassassin.json"
+    },
+    {
+      "id": "ua1",
+      "name": "Ultimate Assassin 1 Online",
+      "file": "mods/ua1.json"
+    },
+    {
+      "id": "ua2",
+      "name": "Ultimate Assassin 2 Online",
+      "file": "mods/ua2.json"
+    },
+    {
+      "id": "ua3",
+      "name": "Ultimate Assassin 3 Online",
+      "file": "mods/ua3.json"
     }
   ]
 }
