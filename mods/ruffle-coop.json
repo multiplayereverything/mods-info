@@ -12,5 +12,5 @@
   "changelog_url": "https://github.com/multiplayereverything/ruffle-coop/releases/tag/v1.0.3.4",
   "relay": { "mode": "star", "max_players": 4, "server": "main" },
   "notice": "",
-  "updated": "2026-10-28"
+  "updated": "2026-10-29"
 }
