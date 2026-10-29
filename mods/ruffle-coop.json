@@ -2,7 +2,7 @@
   "schema": 1,
   "id": "ruffle-coop",
   "name": "Ruffle Together",
-  "game": "Local-multiplayer Flash games (Bad Ice-Cream, Gun Mayhem 2)",
+  "game": "Local-multiplayer Flash games, online (Bad Ice-Cream, Gun Mayhem 2, Territory War, Stealth Hunter 2 and more)",
   "engine": "Ruffle fork (ruffle-coop), lockstep input sync",
   "status": "testing",
   "latest_version": "1.0.3.4",

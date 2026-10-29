@@ -16,7 +16,7 @@ Questions, bugs, or looking for people to play with? Join the [Multiplayer Every
 | Gun Mayhem 2 Online | Gun Mayhem 2: More Mayhem (Flash, Flashpoint) | [`gm2`](mods/gm2.json) | star | 4 | 1 | in-progress |
 | Plazma Burst 2 Campaign Co-op | Plazma Burst 2 (HTML5 build, itch.io) | [`pb2`](mods/pb2.json) | tunnel | 16 | 0.3.0 | testing |
 | Raft Wars Online | Raft Wars (BubbleBox, Flash) | [`raftwars`](mods/raftwars.json) | star | 4 | 1.1 | in-progress |
-| Ruffle Together | Local-multiplayer Flash games (Bad Ice-Cream, Gun Mayhem 2) | [`ruffle-coop`](mods/ruffle-coop.json) | star | 4 | 1.0.3.4 | testing |
+| Ruffle Together | Local-multiplayer Flash games, online (Bad Ice-Cream, Gun Mayhem 2, Territory War, Stealth Hunter 2 and more) | [`ruffle-coop`](mods/ruffle-coop.json) | star | 4 | 1.0.3.4 | testing |
 | Stealth Hunter 2 Online | Stealth Hunter 2 (Flash, Flashpoint) | [`sh2`](mods/sh2.json) | star | 4 | 7 | in-progress |
 | Stealth Assassin Online | Stealth Assassin (Flash, 2014) | [`stealthassassin`](mods/stealthassassin.json) | star | 4 | 1.0.1 | testing |
 | Ultimate Assassin 1 Online | Ultimate Assassin (Flash, games121) | [`ua1`](mods/ua1.json) | star | 4 | 1.0.0 | testing |
