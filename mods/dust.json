@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "id": "dust",
+  "name": "Dust Online",
+  "game": "Dust (Dan-Ball, HTML5 powder sandbox)",
+  "engine": "HTML5 canvas in a browser, lockstep over WebSocket",
+  "status": "testing",
+  "latest_version": "1.0",
+  "min_version": "1.0",
+  "protocol": "1.0",
+  "download_url": "",
+  "changelog_url": "",
+  "relay": { "mode": "star", "max_players": 8, "server": "main" },
+  "notice": "",
+  "updated": "2026-10-31"
+}
