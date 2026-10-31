@@ -5,12 +5,12 @@
   "game": "Local-multiplayer Flash games, online (Bad Ice-Cream, Gun Mayhem 2, Territory War, Stealth Hunter 2 and more)",
   "engine": "Ruffle fork (ruffle-coop), lockstep input sync",
   "status": "testing",
-  "latest_version": "1.0.3.9",
-  "min_version": "1.0.3.9",
-  "protocol": "rc-1.0.3.9",
-  "download_url": "https://github.com/multiplayereverything/ruffle-together/releases/tag/v1.0.3.9",
-  "changelog_url": "https://github.com/multiplayereverything/ruffle-together/releases/tag/v1.0.3.9",
+  "latest_version": "1.0.4",
+  "min_version": "1.0.4",
+  "protocol": "rc-1.0.4",
+  "download_url": "https://github.com/multiplayereverything/ruffle-together/releases/tag/v1.0.4",
+  "changelog_url": "https://github.com/multiplayereverything/ruffle-together/releases/tag/v1.0.4",
   "relay": { "mode": "star", "max_players": 4, "server": "main" },
   "notice": "",
-  "updated": "2026-10-30"
+  "updated": "2026-10-31"
 }
