@@ -8,8 +8,8 @@
   "latest_version": "1.0.3.9",
   "min_version": "1.0.3.9",
   "protocol": "rc-1.0.3.9",
-  "download_url": "https://github.com/multiplayereverything/ruffle-coop/releases/tag/v1.0.3.9",
-  "changelog_url": "https://github.com/multiplayereverything/ruffle-coop/releases/tag/v1.0.3.9",
+  "download_url": "https://github.com/multiplayereverything/ruffle-together/releases/tag/v1.0.3.9",
+  "changelog_url": "https://github.com/multiplayereverything/ruffle-together/releases/tag/v1.0.3.9",
   "relay": { "mode": "star", "max_players": 4, "server": "main" },
   "notice": "",
   "updated": "2026-10-30"
