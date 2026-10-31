@@ -13,6 +13,7 @@ Questions, bugs, or looking for people to play with? Join the [Multiplayer Every
 | Air Battle Online | Air Battle (Flash, BubbleBox) | [`airbattle`](mods/airbattle.json) | star | 4 | 1.1.1 | testing |
 | Bad Ice-Cream Online | Bad Ice-Cream (Nitrome, Flash) | [`bic`](mods/bic.json) | star | 2 | 1 | in-progress |
 | Bow Man Online | Bow Man (Flash) | [`bowman`](mods/bowman.json) | star | 2 | 1.1.1 | in-progress |
+| Dust Online | Dust (Dan-Ball, HTML5 powder sandbox) | [`dust`](mods/dust.json) | star | 8 | 1.0 | testing |
 | Gun Mayhem 2 Online | Gun Mayhem 2: More Mayhem (Flash, Flashpoint) | [`gm2`](mods/gm2.json) | star | 4 | 1 | in-progress |
 | Plazma Burst 2 Campaign Co-op | Plazma Burst 2 (HTML5 build, itch.io) | [`pb2`](mods/pb2.json) | tunnel | 16 | 0.3.0 | testing |
 | Raft Wars Online | Raft Wars (BubbleBox, Flash) | [`raftwars`](mods/raftwars.json) | star | 4 | 1.1 | in-progress |
