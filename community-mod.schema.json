@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://multiplayereverything.com/community-mod.schema.json",
+  "title": "multiplayereverything.json",
+  "description": "The manifest a mod's maker puts on their GitHub release, next to the mod's file. It tells the launcher how the mod installs. The website checks it at approval and pins the release; the launcher checks it again before it installs anything. Any key not listed here is refused.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "repo", "mod"],
+  "properties": {
+    "format": { "const": 1 },
+    "repo": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9-]{0,38}/[A-Za-z0-9._-]{1,100}$", "description": "owner/name of the repository the release is in." },
+    "mod": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "game", "components", "launch"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9-]{1,48}$", "description": "Lowercase letters, digits and dashes. Must be your mod's id on the website." },
+        "publisher": { "type": "string", "maxLength": 80 },
+        "website": { "type": "string", "pattern": "^https://github\\.com/[^/]+/[^/]+$", "description": "https://github.com/owner/name, the same repository." },
+        "game": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["name"],
+          "properties": {
+            "name": { "type": "string", "minLength": 1, "maxLength": 120 },
+            "executable": { "type": "string", "pattern": "^[^/\\\\:$]*$", "description": "A file name, no folder." },
+            "steamAppId": { "type": "string", "pattern": "^[0-9]*$" },
+            "validationFiles": { "type": "array", "maxItems": 30, "items": { "type": "string", "maxLength": 300 } },
+            "processNames": { "type": "array", "maxItems": 30, "items": { "type": "string", "maxLength": 300 } },
+            "detection": {
+              "type": "array",
+              "maxItems": 10,
+              "items": {
+                "oneOf": [
+                  { "type": "object", "additionalProperties": false, "required": ["type"], "properties": { "type": { "const": "steam" }, "appId": { "type": "string" }, "installDir": { "type": "string" } } },
+                  { "type": "object", "additionalProperties": false, "required": ["type"], "properties": { "type": { "const": "path" }, "path": { "type": "string" } } }
+                ]
+              }
+            }
+          }
+        },
+        "install": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "targetDir": { "type": "string", "pattern": "^\\$\\{GAME_DIR\\}", "description": "Must start with ${GAME_DIR} and never climb out of it." },
+            "preserve": { "type": "array", "maxItems": 50, "items": { "type": "string", "maxLength": 300 } },
+            "requires": {
+              "type": "array",
+              "maxItems": 20,
+              "items": { "type": "object", "additionalProperties": false, "properties": { "path": { "type": "string", "pattern": "^[^$:]+$", "description": "A path inside the game's folder, without ${GAME_DIR}: BepInEx\\core, MelonLoader." }, "message": { "type": "string" } } }
+            },
+            "uninstallCleanup": { "type": "array", "maxItems": 50, "items": { "type": "string", "maxLength": 300 } }
+          }
+        },
+        "components": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 30,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "id": { "type": "string" },
+              "name": { "type": "string" },
+              "source": { "type": "string", "minLength": 1, "description": "A path inside your release's file, or the file itself. No variables, no drive letters, no climbing out." },
+              "target": { "type": "string", "pattern": "^\\$\\{(GAME_DIR|INSTALL_DIR)\\}", "description": "Must start with ${GAME_DIR} or ${INSTALL_DIR}." },
+              "targetName": { "type": "string" },
+              "required": { "type": "boolean" }
+            }
+          }
+        },
+        "launch": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["uri"],
+          "properties": {
+            "uri": { "type": "string", "pattern": "^steam://rungameid/([0-9]+|\\$\\{STEAM_APP_ID\\})$" },
+            "hint": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+}
