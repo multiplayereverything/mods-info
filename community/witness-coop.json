@@ -1,0 +1,29 @@
+{
+  "id": "witness-coop",
+  "kind": "link",
+  "repo": "TommoDotCommo/witness-coop",
+  "author": "TommoDotCommo",
+  "authorUrl": "https://github.com/TommoDotCommo",
+  "approved_at": "2026-11-04",
+  "approved_by": "Multiplayer Everything Team",
+  "link": {
+    "game": "The Witness",
+    "url": "https://github.com/TommoDotCommo/witness-coop"
+  },
+  "description": "Co-op for The Witness by TommoDotCommo. A dev preview: two games on one PC share some panels and doors and show each other as characters; playing with friends over the internet is not possible yet.",
+  "players": "Dev preview",
+  "maxPlayers": 4,
+  "color": "#3FA9A0",
+  "colorEnd": "#1C3E59",
+  "guide": {
+    "needs": [
+      "Your own copy of The Witness on Steam, build 11370412."
+    ],
+    "steps": [
+      "Press Open the mod's page to read how far it is and follow its progress."
+    ],
+    "tips": [
+      "It is a dev preview and not playable with friends yet: two copies of the game on one PC can see each other, and some puzzles are shared. It has no installer or release."
+    ]
+  }
+}
