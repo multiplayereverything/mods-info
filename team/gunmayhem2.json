@@ -1,7 +1,7 @@
 {
   "id": "gunmayhem2",
   "repo": "multiplayereverything/flash-games",
-  "minLauncher": "1.0.42",
+  "minLauncher": "1.0.43",
   "approved_at": "2026-11-04",
   "approved_by": "Multiplayer Everything Team",
   "name": "Gun Mayhem 2: More Mayhem",
@@ -49,186 +49,21 @@
   "image": "covers\\gunmayhem2.png",
   "imageFocus": 0.1,
   "description": "Knock each other off floating platforms with guns, in free-for-all or team matches against friends and bots. Online play runs in Ruffle Together: the host is Player 1 and friends join as Players 2, 3 and 4.",
-  "actions": [
-    {
-      "id": "online",
-      "label": "Play online",
-      "icon": "E774",
-      "description": "Host a room for 2 players, or join one with a code",
-      "hint": "Send the room code the message shows to your friend. The game opens once they join. For 3 or 4 players use Other ways to connect.",
-      "swf": [
-        "${GAMES_DIR}\\gunmayhem2_online.swf"
-      ],
-      "args": [
-        "--coop-host-relay",
-        "${SERVER}",
-        "--coop-name",
-        "${PLAYER_NAME}",
-        "--coop-keys",
-        "gun-mayhem-2",
-        "--coop-players",
-        "2"
-      ],
-      "joinArgs": [
-        "--coop-join-relay",
-        "${SERVER}",
-        "--coop-code",
-        "${CODE}",
-        "--coop-name",
-        "${PLAYER_NAME}",
-        "--coop-keys",
-        "gun-mayhem-2"
-      ]
-    },
-    {
-      "id": "room3",
-      "label": "Host a room for 3 players",
-      "icon": "E774",
-      "more": true,
-      "description": "The game starts when 2 friends have joined",
-      "hint": "Send the room code the message shows to your two friends. The game opens once both have joined.",
-      "swf": [
-        "${GAMES_DIR}\\gunmayhem2_online.swf"
-      ],
-      "args": [
-        "--coop-host-relay",
-        "${SERVER}",
-        "--coop-name",
-        "${PLAYER_NAME}",
-        "--coop-keys",
-        "gun-mayhem-2",
-        "--coop-players",
-        "3"
-      ]
-    },
-    {
-      "id": "room4",
-      "label": "Host a room for 4 players",
-      "icon": "E774",
-      "more": true,
-      "description": "The game starts when 3 friends have joined",
-      "hint": "Send the room code the message shows to your three friends. The game opens once all have joined.",
-      "swf": [
-        "${GAMES_DIR}\\gunmayhem2_online.swf"
-      ],
-      "args": [
-        "--coop-host-relay",
-        "${SERVER}",
-        "--coop-name",
-        "${PLAYER_NAME}",
-        "--coop-keys",
-        "gun-mayhem-2",
-        "--coop-players",
-        "4"
-      ]
-    },
-    {
-      "id": "host",
-      "label": "Host with your IP (2 players)",
-      "icon": "E774",
-      "more": true,
-      "description": "Direct connect on port 7790",
-      "hint": "Friends copy your address and port (for example 192.168.1.20:7790) and press Join by IP. Radmin, Tailscale and LAN addresses work.",
-      "swf": [
-        "${GAMES_DIR}\\gunmayhem2_online.swf"
-      ],
-      "args": [
-        "--coop-host",
-        "7790",
-        "--coop-name",
-        "${PLAYER_NAME}",
-        "--coop-keys",
-        "gun-mayhem-2",
-        "--coop-players",
-        "2"
-      ]
-    },
-    {
-      "id": "host3",
-      "label": "Host with your IP (3 players)",
-      "icon": "E774",
-      "more": true,
-      "description": "Direct connect on port 7790; starts when 2 friends have joined",
-      "hint": "Friends copy your address and port and press Join by IP. The game opens once both have joined.",
-      "swf": [
-        "${GAMES_DIR}\\gunmayhem2_online.swf"
-      ],
-      "args": [
-        "--coop-host",
-        "7790",
-        "--coop-name",
-        "${PLAYER_NAME}",
-        "--coop-keys",
-        "gun-mayhem-2",
-        "--coop-players",
-        "3"
-      ]
-    },
-    {
-      "id": "host4",
-      "label": "Host with your IP (4 players)",
-      "icon": "E774",
-      "more": true,
-      "description": "Direct connect on port 7790; starts when 3 friends have joined",
-      "hint": "Friends copy your address and port and press Join by IP. The game opens once all have joined.",
-      "swf": [
-        "${GAMES_DIR}\\gunmayhem2_online.swf"
-      ],
-      "args": [
-        "--coop-host",
-        "7790",
-        "--coop-name",
-        "${PLAYER_NAME}",
-        "--coop-keys",
-        "gun-mayhem-2",
-        "--coop-players",
-        "4"
-      ]
-    },
-    {
-      "id": "join",
-      "label": "Join by IP",
-      "icon": "E774",
-      "more": true,
-      "description": "Copy the host's address first",
-      "hint": "The game opens once you are connected to the host.",
-      "swf": [
-        "${GAMES_DIR}\\gunmayhem2_online.swf"
-      ],
-      "args": [
-        "--coop-join",
-        "${ADDRESS}",
-        "--coop-name",
-        "${PLAYER_NAME}",
-        "--coop-keys",
-        "gun-mayhem-2"
-      ]
-    },
-    {
-      "id": "local",
-      "label": "Play on one keyboard",
-      "icon": "E765",
-      "offline": true,
-      "description": "Up to 4 players on this PC",
-      "swf": [
-        "${GAMES_DIR}\\gunmayhem2_online.swf"
-      ],
-      "args": [
-        "--coop-keys",
-        "gun-mayhem-2"
-      ]
-    },
-    {
-      "id": "play",
-      "label": "Play the original",
-      "description": "The Armor Games release, without the online mod",
-      "edition": "original",
-      "swf": [
+  "flash": {
+    "file": "${GAMES_DIR}\\gunmayhem2_online.swf",
+    "keys": "gun-mayhem-2",
+    "maxPlayers": 4,
+    "original": {
+      "files": [
         "${GAMES_DIR}\\gunmayhem2.swf",
         "${folder:Desktop}\\AIStuff\\ai-work-flash-games\\gunmayhem2\\content\\cache.armorgames.com\\files\\games\\gun-mayhem-2-more-ma-13824.swf",
         "${FLASHPOINT}\\Data\\Games\\gunmayhem2\\content\\cache.armorgames.com\\files\\games\\gun-mayhem-2-more-ma-13824.swf",
         "${FLASHPOINT}\\Data\\Games\\gm2-mod\\work\\gm2_orig.swf"
-      ]
+      ],
+      "description": "The Armor Games release, without the online mod"
+    },
+    "offline": {
+      "local": true
     }
-  ]
+  }
 }

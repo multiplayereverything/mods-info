@@ -1,7 +1,7 @@
 {
   "id": "bowman",
   "repo": "multiplayereverything/flash-games",
-  "minLauncher": "1.0.42",
+  "minLauncher": "1.0.43",
   "approved_at": "2026-11-04",
   "approved_by": "Multiplayer Everything Team",
   "name": "Bow Man",
@@ -44,100 +44,18 @@
   "color": "#C98A4B",
   "colorEnd": "#3B2A1A",
   "description": "Two archers take turns: drag to aim, release to shoot, mind the wind. Online play runs in Ruffle Together: each archer is on their own PC.",
-  "actions": [
-    {
-      "id": "online",
-      "label": "Play online",
-      "icon": "E774",
-      "description": "Host a room for 2 players, or join one with a code",
-      "hint": "Send the room code the message shows to your friend. The game opens once they join.",
-      "swf": [
-        "${GAMES_DIR}\\BowMan_online.swf"
-      ],
-      "args": [
-        "--coop-host-relay",
-        "${SERVER}",
-        "--coop-name",
-        "${PLAYER_NAME}",
-        "--coop-keys",
-        "bow-man",
-        "--coop-players",
-        "2"
-      ],
-      "joinArgs": [
-        "--coop-join-relay",
-        "${SERVER}",
-        "--coop-code",
-        "${CODE}",
-        "--coop-name",
-        "${PLAYER_NAME}",
-        "--coop-keys",
-        "bow-man"
-      ]
-    },
-    {
-      "id": "host",
-      "label": "Host with your IP (2 players)",
-      "icon": "E774",
-      "more": true,
-      "description": "Direct connect on port 7790",
-      "hint": "Friends copy your address and port (for example 192.168.1.20:7790) and press Join by IP. Radmin, Tailscale and LAN addresses work.",
-      "swf": [
-        "${GAMES_DIR}\\BowMan_online.swf"
-      ],
-      "args": [
-        "--coop-host",
-        "7790",
-        "--coop-name",
-        "${PLAYER_NAME}",
-        "--coop-keys",
-        "bow-man",
-        "--coop-players",
-        "2"
-      ]
-    },
-    {
-      "id": "join",
-      "label": "Join by IP",
-      "icon": "E774",
-      "more": true,
-      "description": "Copy the host's address first",
-      "hint": "The game opens once you are connected to the host.",
-      "swf": [
-        "${GAMES_DIR}\\BowMan_online.swf"
-      ],
-      "args": [
-        "--coop-join",
-        "${ADDRESS}",
-        "--coop-name",
-        "${PLAYER_NAME}",
-        "--coop-keys",
-        "bow-man"
-      ]
-    },
-    {
-      "id": "offline",
-      "label": "Play offline",
-      "icon": "E77B",
-      "offline": true,
-      "description": "VS Computer, practice and bird hunting",
-      "swf": [
-        "${GAMES_DIR}\\BowMan_online.swf"
-      ],
-      "args": [
-        "--coop-keys",
-        "bow-man"
-      ]
-    },
-    {
-      "id": "play",
-      "label": "Play the original",
-      "description": "Without the online mod",
-      "edition": "original",
-      "swf": [
+  "flash": {
+    "file": "${GAMES_DIR}\\BowMan_online.swf",
+    "keys": "bow-man",
+    "maxPlayers": 2,
+    "original": {
+      "files": [
         "${GAMES_DIR}\\bowmandash.swf",
         "${folder:Desktop}\\AIStuff\\ai-work-flash-games\\Bow Man\\bowmandash.swf"
       ]
+    },
+    "offline": {
+      "description": "VS Computer, practice and bird hunting"
     }
-  ]
+  }
 }
