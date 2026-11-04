@@ -1,0 +1,154 @@
+{
+  "id": "berrybury",
+  "repo": "multiplayereverything/berry-burry-berry-coop",
+  "minLauncher": "1.0.42",
+  "approved_at": "2026-11-04",
+  "approved_by": "fordtoxic",
+  "name": "Berry Bury Berry Co-op",
+  "players": "2-4 players (co-op)",
+  "categories": [
+    "pc",
+    "online",
+    "coop"
+  ],
+  "guide": {
+    "needs": [
+      "Your own copy of Berry Bury Berry on Steam, with Steam running and signed in on every PC.",
+      "Everyone you play with needs the same version of the mod. The launcher keeps yours up to date."
+    ],
+    "steps": [
+      "Press Install. The launcher finds your copy of the game and puts the mod, and the BepInEx loader it needs, in it.",
+      "Press Launch. The game starts through Steam.",
+      "The host picks a save and starts playing. Their farm opens a friends-only Steam lobby by itself.",
+      "Friends right-click the host in Steam and pick Join Game, accept the host's invite, or press Join next to the host's name in the F8 window. They load straight into the host's farm.",
+      "On one network, or with a VPN such as Tailscale or ZeroTier: use LAN / direct IP in the F8 window (port 27777)."
+    ],
+    "keys": [
+      {
+        "key": "F8",
+        "does": "Opens the co-op window."
+      }
+    ],
+    "tips": [
+      "Only the host starts the game and picks the save. Guests' own saves are not written while they play on someone else's farm.",
+      "Fall into the hole and you watch the others until the day ends. Click to switch who you watch.",
+      "Experimental: expect bugs, and send reports to the Discord."
+    ],
+    "links": [
+      {
+        "label": "Multiplayer Everything Discord",
+        "url": "https://discord.com/invite/P2MSSUf5GX"
+      }
+    ]
+  },
+  "color": "#D94A6B",
+  "colorEnd": "#5A1F33",
+  "description": "Co-op for Berry Bury Berry (Steam): up to four players farm the host's save together, with one shared wallet and yard, and everyone's berries, coins, upgrades and buildings in the same world. Join through Steam or LAN. Everyone needs the same version.",
+  "mod": {
+    "id": "berrybury",
+    "game": {
+      "name": "Berry Bury Berry",
+      "executable": "BerryBerryBerryBerryBerryBerryBerryBerryBerry.exe",
+      "steamAppId": "3370870",
+      "validationFiles": [
+        "${GAME_EXE}",
+        "BerryBerryBerryBerryBerryBerryBerryBerryBerry_Data",
+        "UnityPlayer.dll"
+      ],
+      "processNames": [
+        "BerryBerryBerryBerryBerryBerryBerryBerryBerry.exe"
+      ],
+      "detection": [
+        {
+          "type": "path",
+          "path": "${folder:ProgramFilesX86}\\Steam\\steamapps\\common\\BerryBerryBerry"
+        },
+        {
+          "type": "steam",
+          "appId": "3370870",
+          "installDir": "BerryBerryBerry"
+        }
+      ]
+    },
+    "install": {
+      "targetDir": "${GAME_DIR}\\BepInEx\\plugins\\BerryCoop",
+      "stateDir": "${INSTALL_DIR}\\.installer",
+      "uninstallCleanupWith": "loader",
+      "uninstallCleanup": [
+        "BepInEx/cache/**",
+        "BepInEx/patchers/**",
+        "BepInEx/config/BepInEx.cfg",
+        "BepInEx/config/berrybury.coop.cfg",
+        "BepInEx/config/BerryCoop/**",
+        "BepInEx/LogOutput.log",
+        "BepInEx/LogOutput.log.1",
+        "BepInEx/ErrorLog.log"
+      ]
+    },
+    "components": [
+      {
+        "id": "loader",
+        "name": "BepInEx mod loader",
+        "source": "loader/BepInEx/core",
+        "target": "${GAME_DIR}\\BepInEx\\core",
+        "skipIfPresent": [
+          "BepInEx/core"
+        ],
+        "required": true
+      },
+      {
+        "id": "loader-winhttp",
+        "name": "BepInEx mod loader",
+        "source": "loader/winhttp.dll",
+        "target": "${GAME_DIR}",
+        "skipIfPresent": [
+          "BepInEx/core"
+        ],
+        "required": true
+      },
+      {
+        "id": "loader-doorstop",
+        "name": "BepInEx mod loader",
+        "source": "loader/doorstop_config.ini",
+        "target": "${GAME_DIR}",
+        "skipIfPresent": [
+          "BepInEx/core"
+        ],
+        "required": true
+      },
+      {
+        "id": "loader-version",
+        "name": "BepInEx mod loader",
+        "source": "loader/.doorstop_version",
+        "target": "${GAME_DIR}",
+        "skipIfPresent": [
+          "BepInEx/core"
+        ],
+        "required": true
+      },
+      {
+        "id": "mod",
+        "name": "Berry Bury Berry Co-op",
+        "source": "BepInEx/plugins/BerryCoop",
+        "target": "${INSTALL_DIR}",
+        "required": true
+      }
+    ],
+    "launch": {
+      "uri": "steam://rungameid/${STEAM_APP_ID}",
+      "hint": "Start playing and your farm opens a friends-only Steam lobby. Press F8 in the game for the co-op window."
+    },
+    "package": {
+      "github": "multiplayereverything/berry-burry-berry-coop",
+      "asset": "BerryCoop-BepInEx-*.zip",
+      "extras": [
+        {
+          "dir": "loader",
+          "github": "multiplayereverything/berry-burry-berry-coop",
+          "tag": "bepinex-5.4.23.6",
+          "asset": "BepInEx_win_x64_5.4.23.6.zip"
+        }
+      ]
+    }
+  }
+}
