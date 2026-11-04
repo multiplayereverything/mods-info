@@ -32,7 +32,7 @@
               "maxItems": 10,
               "items": {
                 "oneOf": [
-                  { "type": "object", "additionalProperties": false, "required": ["type"], "properties": { "type": { "const": "steam" }, "appId": { "type": "string" }, "installDir": { "type": "string" } } },
+                  { "type": "object", "additionalProperties": false, "required": ["type"], "properties": { "type": { "const": "steam" }, "appId": { "type": "string" }, "installDir": { "type": "string" }, "subPath": { "type": "string", "minLength": 1, "pattern": "^[^$:/\\\\][^$:]*$", "description": "A folder inside the game's Steam folder, for example Atlas\\Binaries\\Win64. No .. and no drive." } } },
                   { "type": "object", "additionalProperties": false, "required": ["type"], "properties": { "type": { "const": "path" }, "path": { "type": "string" } } }
                 ]
               }
@@ -44,13 +44,15 @@
           "additionalProperties": false,
           "properties": {
             "targetDir": { "type": "string", "pattern": "^\\$\\{GAME_DIR\\}", "description": "Must start with ${GAME_DIR} and never climb out of it." },
+            "stateDir": { "type": "string", "pattern": "^\\$\\{(GAME_DIR|INSTALL_DIR)\\}", "description": "Where the launcher keeps its install record: inside ${GAME_DIR} or ${INSTALL_DIR}, never climbing out. The default is ${INSTALL_DIR}\\.installer." },
             "preserve": { "type": "array", "maxItems": 50, "items": { "type": "string", "maxLength": 300 } },
             "requires": {
               "type": "array",
               "maxItems": 20,
               "items": { "type": "object", "additionalProperties": false, "properties": { "path": { "type": "string", "pattern": "^[^$:]+$", "description": "A path inside the game's folder, without ${GAME_DIR}: BepInEx\\core, MelonLoader." }, "message": { "type": "string" } } }
             },
-            "uninstallCleanup": { "type": "array", "maxItems": 50, "items": { "type": "string", "maxLength": 300 } }
+            "uninstallCleanup": { "type": "array", "maxItems": 50, "items": { "type": "string", "maxLength": 300 } },
+            "uninstallCleanupWith": { "type": "string", "description": "The id of one of the components (the loader). uninstallCleanup is then removed only together with that component." }
           }
         },
         "components": {
@@ -66,17 +68,43 @@
               "source": { "type": "string", "minLength": 1, "description": "A path inside your release's file, or the file itself. No variables, no drive letters, no climbing out." },
               "target": { "type": "string", "pattern": "^\\$\\{(GAME_DIR|INSTALL_DIR)\\}", "description": "Must start with ${GAME_DIR} or ${INSTALL_DIR}." },
               "targetName": { "type": "string" },
-              "required": { "type": "boolean" }
+              "required": { "type": "boolean" },
+              "skipIfPresent": { "type": "array", "minItems": 1, "maxItems": 10, "items": { "type": "string", "pattern": "^[^$:/\\\\][^$:]*$", "description": "A path inside the game's folder, like BepInEx/core. The component is left out when the game already has it." } }
             }
           }
         },
         "launch": {
           "type": "object",
           "additionalProperties": false,
-          "required": ["uri"],
+          "description": "Exactly one of uri and executable.",
+          "oneOf": [{ "required": ["uri"] }, { "required": ["executable"] }],
           "properties": {
             "uri": { "type": "string", "pattern": "^steam://rungameid/([0-9]+|\\$\\{STEAM_APP_ID\\})$" },
+            "executable": { "type": "string", "pattern": "^\\$\\{GAME_DIR\\}\\\\[^$:/]+\\.[eE][xX][eE]$", "description": "A program in the game's folder: ${GAME_DIR}\\Program.exe." },
             "hint": { "type": "string" }
+          }
+        },
+        "package": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["extras"],
+          "description": "A loader that comes from a second release of this same repository. The website pins its file and checksum at approval. Components read it as <dir>/<path>.",
+          "properties": {
+            "extras": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 3,
+              "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": ["dir", "tag", "asset"],
+                "properties": {
+                  "dir": { "type": "string", "pattern": "^[^$:/\\\\][^$:]*$", "description": "The folder the loader unpacks into inside the package, like loader." },
+                  "tag": { "type": "string", "pattern": "^[A-Za-z0-9._+-]{1,120}$", "description": "The tag of the loader's release in your repository." },
+                  "asset": { "type": "string", "pattern": "^[A-Za-z0-9._+-]{1,120}$", "description": "The file in that release." }
+                }
+              }
+            }
           }
         }
       }
