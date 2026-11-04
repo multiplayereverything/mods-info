@@ -1,0 +1,154 @@
+{
+  "id": "baldi-together",
+  "repo": "multiplayereverything/baldi-plus-coop",
+  "minLauncher": "1.0.42",
+  "approved_at": "2026-11-04",
+  "approved_by": "Multiplayer Everything Team",
+  "name": "Baldi Together",
+  "site": "baldi",
+  "players": "2-4 players (co-op)",
+  "categories": [
+    "pc",
+    "coop"
+  ],
+  "guide": {
+    "needs": [
+      "Your own copy of Baldi's Basics Plus (version 0.14.5) on Steam. For Steam play: the game started from Steam, signed in.",
+      "Everyone you play with needs the same version of the mod. The launcher keeps yours up to date."
+    ],
+    "steps": [
+      "Press Install. The launcher finds your copy of the game and puts the mod, and the BepInEx loader it needs, in it.",
+      "Press Launch.",
+      "In the main menu pick MULTIPLAYER (above the copyright), or press F5.",
+      "Host over your LAN, or pick STEAM GAME and HOST ON STEAM (friends only or public).",
+      "Friends join from FIND STEAM GAMES, from your invite, or with Join Game on your Steam profile.",
+      "The host starts the run; everyone shares one school."
+    ],
+    "keys": [
+      {
+        "key": "F5",
+        "does": "Opens the multiplayer menu."
+      },
+      {
+        "key": "F2",
+        "does": "Opens the debug console, used for bug reports."
+      }
+    ],
+    "tips": [
+      "Experimental: expect bugs, and send reports to the Discord.",
+      "Only the host starts a run."
+    ],
+    "links": [
+      {
+        "label": "Multiplayer Everything Discord",
+        "url": "https://discord.com/invite/P2MSSUf5GX"
+      }
+    ]
+  },
+  "color": "#3C9B45",
+  "colorEnd": "#12331A",
+  "description": "Co-op for Baldi's Basics Plus (Steam): up to four players share one school, with Baldi, the other characters, items, the shop and elevators in sync. Play over your network or online through Steam. Everyone needs the same version.",
+  "mod": {
+    "id": "baldi-together",
+    "game": {
+      "name": "Baldi's Basics Plus",
+      "executable": "BALDI.exe",
+      "steamAppId": "1275890",
+      "validationFiles": [
+        "${GAME_EXE}",
+        "BALDI_Data",
+        "UnityPlayer.dll"
+      ],
+      "processNames": [
+        "BALDI.exe"
+      ],
+      "detection": [
+        {
+          "type": "path",
+          "path": "${folder:ProgramFilesX86}\\Steam\\steamapps\\common\\Baldi's Basics Plus"
+        },
+        {
+          "type": "steam",
+          "appId": "1275890",
+          "installDir": "Baldi's Basics Plus"
+        }
+      ]
+    },
+    "install": {
+      "targetDir": "${GAME_DIR}\\BepInEx\\plugins\\BaldiTogether",
+      "stateDir": "${INSTALL_DIR}\\.installer",
+      "uninstallCleanupWith": "loader",
+      "uninstallCleanup": [
+        "BepInEx/cache/**",
+        "BepInEx/patchers/**",
+        "BepInEx/config/BepInEx.cfg",
+        "BepInEx/LogOutput.log",
+        "BepInEx/ErrorLog.log"
+      ]
+    },
+    "components": [
+      {
+        "id": "loader",
+        "name": "BepInEx mod loader",
+        "source": "loader/BepInEx/core",
+        "target": "${GAME_DIR}\\BepInEx\\core",
+        "skipIfPresent": [
+          "BepInEx/core"
+        ],
+        "required": true
+      },
+      {
+        "id": "loader-winhttp",
+        "name": "BepInEx mod loader",
+        "source": "loader/winhttp.dll",
+        "target": "${GAME_DIR}",
+        "skipIfPresent": [
+          "BepInEx/core"
+        ],
+        "required": true
+      },
+      {
+        "id": "loader-doorstop",
+        "name": "BepInEx mod loader",
+        "source": "loader/doorstop_config.ini",
+        "target": "${GAME_DIR}",
+        "skipIfPresent": [
+          "BepInEx/core"
+        ],
+        "required": true
+      },
+      {
+        "id": "loader-version",
+        "name": "BepInEx mod loader",
+        "source": "loader/.doorstop_version",
+        "target": "${GAME_DIR}",
+        "skipIfPresent": [
+          "BepInEx/core"
+        ],
+        "required": true
+      },
+      {
+        "id": "mod",
+        "name": "Baldi Together",
+        "source": "BepInEx/plugins/BaldiTogether",
+        "required": true
+      }
+    ],
+    "launch": {
+      "uri": "steam://rungameid/${STEAM_APP_ID}",
+      "hint": "In the game's main menu pick MULTIPLAYER (or press F5): host over LAN or on Steam, or join a friend."
+    },
+    "package": {
+      "github": "multiplayereverything/baldi-plus-coop",
+      "asset": "BaldiTogether-BepInEx-*.zip",
+      "extras": [
+        {
+          "dir": "loader",
+          "github": "multiplayereverything/baldi-plus-coop",
+          "tag": "bepinex-5.4.23.5",
+          "asset": "BepInEx_win_x64_5.4.23.5.zip"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,216 @@
+{
+  "id": "stealthhunter2",
+  "repo": "multiplayereverything/flash-games",
+  "minLauncher": "1.0.42",
+  "approved_at": "2026-11-04",
+  "approved_by": "Multiplayer Everything Team",
+  "name": "Stealth Hunter 2",
+  "players": "1-4 players (online co-op)",
+  "maxPlayers": 4,
+  "online": {
+    "id": "ruffle-coop",
+    "join": "online"
+  },
+  "categories": [
+    "flash",
+    "online",
+    "coop"
+  ],
+  "guide": {
+    "steps": [
+      "Press Play online. A message shows your room code; send it to your friend. For three or four players use Host a room for 3 or 4 players under Other ways to connect: the game starts once everyone has joined.",
+      "Your friends type the code in Join by code, or pick your room in the Rooms list.",
+      "On the title screen the host picks the number of players, then starts the mission."
+    ],
+    "tips": [
+      "Co-op for up to four players on one shared view; every player has their own keys.",
+      "If anyone dies, the team restarts the mission.",
+      "Everyone needs the same Ruffle Together build and game file; the launcher keeps them current."
+    ]
+  },
+  "color": "#2BD4C5",
+  "colorEnd": "#1B3A6B",
+  "image": "covers\\stealthhunter2.png",
+  "imageFocus": 0.62,
+  "description": "Sneak through guarded bases, pick locks and take out guards without raising the alarm. Online play runs in Ruffle Together: up to four players play the campaign together on a shared view, and if anyone dies the team restarts the mission.",
+  "actions": [
+    {
+      "id": "online",
+      "label": "Play online",
+      "icon": "E774",
+      "description": "Host a room for 2 players, or join one with a code",
+      "hint": "Send the room code the message shows to your friend. The game opens once they join. For 3 or 4 players use Other ways to connect.",
+      "swf": [
+        "${GAMES_DIR}\\stealthhunter2_online.swf"
+      ],
+      "args": [
+        "--coop-host-relay",
+        "${SERVER}",
+        "--coop-name",
+        "${PLAYER_NAME}",
+        "--coop-keys",
+        "stealth-hunter-2",
+        "--coop-players",
+        "2"
+      ],
+      "joinArgs": [
+        "--coop-join-relay",
+        "${SERVER}",
+        "--coop-code",
+        "${CODE}",
+        "--coop-name",
+        "${PLAYER_NAME}",
+        "--coop-keys",
+        "stealth-hunter-2"
+      ]
+    },
+    {
+      "id": "room3",
+      "label": "Host a room for 3 players",
+      "icon": "E774",
+      "more": true,
+      "description": "The game starts when 2 friends have joined",
+      "hint": "Send the room code the message shows to your two friends. The game opens once both have joined.",
+      "swf": [
+        "${GAMES_DIR}\\stealthhunter2_online.swf"
+      ],
+      "args": [
+        "--coop-host-relay",
+        "${SERVER}",
+        "--coop-name",
+        "${PLAYER_NAME}",
+        "--coop-keys",
+        "stealth-hunter-2",
+        "--coop-players",
+        "3"
+      ]
+    },
+    {
+      "id": "room4",
+      "label": "Host a room for 4 players",
+      "icon": "E774",
+      "more": true,
+      "description": "The game starts when 3 friends have joined",
+      "hint": "Send the room code the message shows to your three friends. The game opens once all have joined.",
+      "swf": [
+        "${GAMES_DIR}\\stealthhunter2_online.swf"
+      ],
+      "args": [
+        "--coop-host-relay",
+        "${SERVER}",
+        "--coop-name",
+        "${PLAYER_NAME}",
+        "--coop-keys",
+        "stealth-hunter-2",
+        "--coop-players",
+        "4"
+      ]
+    },
+    {
+      "id": "host",
+      "label": "Host with your IP (2 players)",
+      "icon": "E774",
+      "more": true,
+      "description": "Direct connect on port 7790",
+      "hint": "Friends copy your address and port (for example 192.168.1.20:7790) and press Join by IP. Radmin, Tailscale and LAN addresses work.",
+      "swf": [
+        "${GAMES_DIR}\\stealthhunter2_online.swf"
+      ],
+      "args": [
+        "--coop-host",
+        "7790",
+        "--coop-name",
+        "${PLAYER_NAME}",
+        "--coop-keys",
+        "stealth-hunter-2",
+        "--coop-players",
+        "2"
+      ]
+    },
+    {
+      "id": "host3",
+      "label": "Host with your IP (3 players)",
+      "icon": "E774",
+      "more": true,
+      "description": "Direct connect on port 7790; starts when 2 friends have joined",
+      "hint": "Friends copy your address and port and press Join by IP. The game opens once both have joined.",
+      "swf": [
+        "${GAMES_DIR}\\stealthhunter2_online.swf"
+      ],
+      "args": [
+        "--coop-host",
+        "7790",
+        "--coop-name",
+        "${PLAYER_NAME}",
+        "--coop-keys",
+        "stealth-hunter-2",
+        "--coop-players",
+        "3"
+      ]
+    },
+    {
+      "id": "host4",
+      "label": "Host with your IP (4 players)",
+      "icon": "E774",
+      "more": true,
+      "description": "Direct connect on port 7790; starts when 3 friends have joined",
+      "hint": "Friends copy your address and port and press Join by IP. The game opens once all have joined.",
+      "swf": [
+        "${GAMES_DIR}\\stealthhunter2_online.swf"
+      ],
+      "args": [
+        "--coop-host",
+        "7790",
+        "--coop-name",
+        "${PLAYER_NAME}",
+        "--coop-keys",
+        "stealth-hunter-2",
+        "--coop-players",
+        "4"
+      ]
+    },
+    {
+      "id": "join",
+      "label": "Join by IP",
+      "icon": "E774",
+      "more": true,
+      "description": "Copy the host's address first",
+      "hint": "The game opens once you are connected to the host.",
+      "swf": [
+        "${GAMES_DIR}\\stealthhunter2_online.swf"
+      ],
+      "args": [
+        "--coop-join",
+        "${ADDRESS}",
+        "--coop-name",
+        "${PLAYER_NAME}",
+        "--coop-keys",
+        "stealth-hunter-2"
+      ]
+    },
+    {
+      "id": "offline",
+      "label": "Play solo",
+      "icon": "E77B",
+      "offline": true,
+      "description": "The campaign on your own",
+      "swf": [
+        "${GAMES_DIR}\\stealthhunter2_online.swf"
+      ],
+      "args": [
+        "--coop-keys",
+        "stealth-hunter-2"
+      ]
+    },
+    {
+      "id": "play",
+      "label": "Play the original",
+      "description": "Without the online mod",
+      "edition": "original",
+      "swf": [
+        "${GAMES_DIR}\\stealth_hunter_2.swf",
+        "${folder:Desktop}\\AIStuff\\ai-work-flash-games\\stealthhunter2\\stealth_hunter_2.swf"
+      ]
+    }
+  ]
+}

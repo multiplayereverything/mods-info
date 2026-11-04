@@ -1,0 +1,151 @@
+{
+  "id": "gta-coop",
+  "repo": "multiplayereverything/gta-coop",
+  "minLauncher": "1.0.42",
+  "approved_at": "2026-11-04",
+  "approved_by": "Multiplayer Everything Team",
+  "name": "GTA San Andreas",
+  "site": "gta",
+  "players": "2-4 players (co-op)",
+  "categories": [
+    "pc",
+    "coop"
+  ],
+  "guide": {
+    "needs": [
+      "Your own copy of Grand Theft Auto: San Andreas, version 1.0 US. Steam and Rockstar Launcher copies must be downgraded to 1.0 first.",
+      "The DirectX End-User Runtime (June 2010), if the game says d3dx9_43.dll is missing.",
+      "Everyone you play with needs the same version of the mod."
+    ],
+    "steps": [
+      "Press Install. The co-op files go next to gta_sa.exe and the game's own eax.dll is kept.",
+      "Hosting? Run server.exe from the CoopAndreas/server folder in your GTA folder, and leave it open. Allow it through the firewall. Friends reach you by forwarding UDP port 6767, or through a VPN such as Tailscale, ZeroTier or Radmin VPN (easiest).",
+      "Everyone, the host too: press Launch, which starts LaunchCoopAndreas.exe, then Start Game.",
+      "Enter a nickname, the host's address (the host types 127.0.0.1) and port 6767, then Connect.",
+      "The host joins first: the first player in runs the story."
+    ],
+    "keys": [
+      {
+        "key": "F6",
+        "does": "Opens the chat. Type /report and what went wrong to save a bug report."
+      }
+    ],
+    "tips": [
+      "CLEO+ breaks shot sync. Move CLEO/CLEO+.cleo out of your GTA folder; the mod's own install.bat does that, the launcher does not.",
+      "Cutscenes skip when every player presses the skip key.",
+      "Don't start a mission in the first seconds after the game loads: walk to the marker first.",
+      "A crash closes the game quietly and writes a log to the CoopAndreas_crashes folder in your GTA folder."
+    ],
+    "links": [
+      {
+        "label": "Multiplayer Everything Discord",
+        "url": "https://discord.com/invite/P2MSSUf5GX"
+      }
+    ]
+  },
+  "color": "#E07A1F",
+  "colorEnd": "#3A1B07",
+  "description": "Co-op for Grand Theft Auto: San Andreas (PC, version 1.0 US): the whole story with up to four friends, with missions, cutscenes, money, saves and gang territories in sync. Based on CoopAndreas. You need your own copy of the game, downgraded to 1.0, and everyone needs the same version.",
+  "mod": {
+    "id": "gta-coop",
+    "game": {
+      "name": "Grand Theft Auto: San Andreas",
+      "executable": "gta_sa.exe",
+      "steamAppId": "12120",
+      "validationFiles": [
+        "${GAME_EXE}",
+        "eax.dll",
+        "models"
+      ],
+      "processNames": [
+        "gta_sa.exe",
+        "LaunchCoopAndreas.exe"
+      ],
+      "detection": [
+        {
+          "type": "path",
+          "path": "${folder:ProgramFilesX86}\\Steam\\steamapps\\common\\Grand Theft Auto San Andreas"
+        },
+        {
+          "type": "steam",
+          "appId": "12120",
+          "installDir": "Grand Theft Auto San Andreas"
+        },
+        {
+          "type": "path",
+          "path": "${folder:ProgramFiles}\\Rockstar Games\\GTA San Andreas"
+        }
+      ]
+    },
+    "install": {
+      "targetDir": "${GAME_DIR}\\CoopAndreas",
+      "stateDir": "${INSTALL_DIR}\\.installer",
+      "preserve": [
+        "server/server-config.ini"
+      ]
+    },
+    "components": [
+      {
+        "id": "original-eax",
+        "name": "The game's eax.dll, kept",
+        "sourceGame": [
+          "eax_orig.dll",
+          "eax.dll"
+        ],
+        "targetName": "eax_orig.dll",
+        "target": "${GAME_DIR}",
+        "required": true
+      },
+      {
+        "id": "proxy",
+        "name": "Co-op loader",
+        "source": "game/coop_eax.dll",
+        "targetName": "eax.dll",
+        "target": "${GAME_DIR}",
+        "required": true
+      },
+      {
+        "id": "plugin",
+        "name": "Co-op plugin",
+        "source": "game/CoopAndreasSA.dll",
+        "target": "${GAME_DIR}",
+        "required": true
+      },
+      {
+        "id": "launcher",
+        "name": "Co-op launcher",
+        "source": "game/LaunchCoopAndreas.exe",
+        "target": "${GAME_DIR}",
+        "required": true
+      },
+      {
+        "id": "launcher-manifest",
+        "name": "Co-op launcher",
+        "source": "game/LaunchCoopAndreas.exe.manifest",
+        "target": "${GAME_DIR}",
+        "required": true
+      },
+      {
+        "id": "mod",
+        "name": "Co-op scripts",
+        "source": "game/CoopAndreas",
+        "required": true
+      },
+      {
+        "id": "server",
+        "name": "Server for hosting",
+        "source": "server",
+        "target": "${INSTALL_DIR}\\server",
+        "required": true
+      }
+    ],
+    "launch": {
+      "executable": "${GAME_DIR}\\LaunchCoopAndreas.exe",
+      "hint": "In the co-op launcher pick Start Game, type your nickname and the host's address (the host: 127.0.0.1) and port 6767. To host, run CoopAndreas\\server\\server.exe first and allow it through the firewall."
+    },
+    "package": {
+      "github": "multiplayereverything/gta-coop",
+      "asset": "GTACoop-*.zip"
+    }
+  }
+}
