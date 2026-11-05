@@ -1,0 +1,141 @@
+{
+  "format": 1,
+  "checkedAt": "2026-11-05T10:34:15Z",
+  "mods": {
+    "baldi-together": {
+      "repo": "multiplayereverything/baldi-plus-coop",
+      "tag": "v0.9.2",
+      "version": "0.9.2",
+      "asset": "BaldiTogether-BepInEx-0.9.2.zip",
+      "url": "https://github.com/multiplayereverything/baldi-plus-coop/releases/download/v0.9.2/BaldiTogether-BepInEx-0.9.2.zip",
+      "sha256": "21addc669b8f1041c9ce3a5a07515ace60eb90892df66c53f74027ea78afa042",
+      "extras": [
+        {
+          "dir": "loader",
+          "repo": "multiplayereverything/baldi-plus-coop",
+          "tag": "bepinex-5.4.23.5",
+          "asset": "BepInEx_win_x64_5.4.23.5.zip",
+          "url": "https://github.com/multiplayereverything/baldi-plus-coop/releases/download/bepinex-5.4.23.5/BepInEx_win_x64_5.4.23.5.zip",
+          "sha256": "82f9878551030f54657792c0740d9d51a09500eeae1fba21106b0c441e6732c4"
+        }
+      ]
+    },
+    "berrybury": {
+      "repo": "multiplayereverything/berry-burry-berry-coop",
+      "tag": "v0.2.1",
+      "version": "0.2.1",
+      "asset": "BerryCoop-BepInEx-0.2.1.zip",
+      "url": "https://github.com/multiplayereverything/berry-burry-berry-coop/releases/download/v0.2.1/BerryCoop-BepInEx-0.2.1.zip",
+      "sha256": "82cb1b518b05e135f588d696390217e8a45fda150af9abf9320e3c9efb0f581f",
+      "extras": [
+        {
+          "dir": "loader",
+          "repo": "multiplayereverything/berry-burry-berry-coop",
+          "tag": "bepinex-5.4.23.6",
+          "asset": "BepInEx_win_x64_5.4.23.6.zip",
+          "url": "https://github.com/multiplayereverything/berry-burry-berry-coop/releases/download/bepinex-5.4.23.6/BepInEx_win_x64_5.4.23.6.zip",
+          "sha256": "6c57a714a892efb4e9e1fef63d608a3391f30ec984031c465404e4ee381a0755"
+        }
+      ]
+    },
+    "cupheads": {
+      "repo": "multiplayereverything/CupHeads",
+      "tag": "v1.7.0",
+      "version": "1.7.0",
+      "asset": "CupHeads-BepInEx-1.7.0.zip",
+      "url": "https://github.com/multiplayereverything/CupHeads/releases/download/v1.7.0/CupHeads-BepInEx-1.7.0.zip",
+      "sha256": "575168f5d3ec23ebc4e6bca1357b878c39f66edd310e836ba41b7a37079b636f",
+      "extras": [
+        {
+          "dir": "loader",
+          "repo": "multiplayereverything/CupHeads",
+          "tag": "bepinex-5.4.23.5",
+          "asset": "BepInEx_win_x64_5.4.23.5.zip",
+          "url": "https://github.com/multiplayereverything/CupHeads/releases/download/bepinex-5.4.23.5/BepInEx_win_x64_5.4.23.5.zip",
+          "sha256": "82f9878551030f54657792c0740d9d51a09500eeae1fba21106b0c441e6732c4"
+        }
+      ]
+    },
+    "dave-the-diver-multiplayer": {
+      "repo": "multiplayereverything/Dave-The-Divers-Coop",
+      "tag": "v0.19.3",
+      "version": "0.19.3",
+      "asset": "DaveTheDiverMP-0.19.3.zip",
+      "url": "https://github.com/multiplayereverything/Dave-The-Divers-Coop/releases/download/v0.19.3/DaveTheDiverMP-0.19.3.zip",
+      "sha256": "467f35f07474b6e5dfa74ea9ebe810cf443513c38eb1c35b13fa20b70282df0b",
+      "extras": [
+        {
+          "dir": "loader",
+          "repo": "multiplayereverything/Dave-The-Divers-Coop",
+          "tag": "bepinex-6.0.0-be.790",
+          "asset": "BepInEx-Unity.IL2CPP-win-x64-6.0.0-be.790.zip",
+          "url": "https://github.com/multiplayereverything/Dave-The-Divers-Coop/releases/download/bepinex-6.0.0-be.790/BepInEx-Unity.IL2CPP-win-x64-6.0.0-be.790.zip",
+          "sha256": "7e2c83e38db7744d6457839bc869b311aa29a47517938a3a7643be24d00c72ec"
+        }
+      ]
+    },
+    "gta-coop": {
+      "repo": "multiplayereverything/gta-coop",
+      "tag": "v1.0.0",
+      "version": "1.0.0",
+      "asset": "GTACoop-1.0.0.zip",
+      "url": "https://github.com/multiplayereverything/gta-coop/releases/download/v1.0.0/GTACoop-1.0.0.zip",
+      "sha256": "ba55441396b1e78f66a6dc3004bbcf3ade39dded45f8f357d7a5b179c73ff8b0",
+      "extras": []
+    },
+    "miside-together": {
+      "repo": "multiplayereverything/miside-coop",
+      "tag": "v0.3.5",
+      "version": "0.3.5",
+      "asset": "MiSideTogether-0.3.5.zip",
+      "url": "https://github.com/multiplayereverything/miside-coop/releases/download/v0.3.5/MiSideTogether-0.3.5.zip",
+      "sha256": "b3e4aec74feffe099981e5affda2707f783219382a1912e1ed44d793c47f5d92",
+      "extras": [
+        {
+          "dir": "loader",
+          "repo": "multiplayereverything/miside-coop",
+          "tag": "bepinex-6.0.0-be.790",
+          "asset": "BepInEx-Unity.IL2CPP-win-x64-6.0.0-be.790.zip",
+          "url": "https://github.com/multiplayereverything/miside-coop/releases/download/bepinex-6.0.0-be.790/BepInEx-Unity.IL2CPP-win-x64-6.0.0-be.790.zip",
+          "sha256": "7e2c83e38db7744d6457839bc869b311aa29a47517938a3a7643be24d00c72ec"
+        }
+      ]
+    },
+    "rick-and-morty-together": {
+      "repo": "multiplayereverything/rick-and-morty-coop",
+      "tag": "v0.9.1",
+      "version": "0.9.1",
+      "asset": "RickAndMortyTogether-BepInEx-0.9.1.zip",
+      "url": "https://github.com/multiplayereverything/rick-and-morty-coop/releases/download/v0.9.1/RickAndMortyTogether-BepInEx-0.9.1.zip",
+      "sha256": "bbbe4634c4cf2a749651abb345047e309750bd81c23d4e0fc2bad38c0b1c283a",
+      "extras": [
+        {
+          "dir": "loader",
+          "repo": "multiplayereverything/rick-and-morty-coop",
+          "tag": "bepinex-5.4.23.5",
+          "asset": "BepInEx_win_x64_5.4.23.5.zip",
+          "url": "https://github.com/multiplayereverything/rick-and-morty-coop/releases/download/bepinex-5.4.23.5/BepInEx_win_x64_5.4.23.5.zip",
+          "sha256": "82f9878551030f54657792c0740d9d51a09500eeae1fba21106b0c441e6732c4"
+        }
+      ]
+    },
+    "spooky-together": {
+      "repo": "multiplayereverything/spooky-together",
+      "tag": "v0.2.11",
+      "version": "0.2.11",
+      "asset": "SpookyTogether-BepInEx-0.2.11.zip",
+      "url": "https://github.com/multiplayereverything/spooky-together/releases/download/v0.2.11/SpookyTogether-BepInEx-0.2.11.zip",
+      "sha256": "7643b45af2deb2bd669b2347374b0a220b4035240015813fbd89a7d1390e961d",
+      "extras": [
+        {
+          "dir": "loader",
+          "repo": "multiplayereverything/spooky-together",
+          "tag": "bepinex-5.4.23.5",
+          "asset": "BepInEx_win_x64_5.4.23.5.zip",
+          "url": "https://github.com/multiplayereverything/spooky-together/releases/download/bepinex-5.4.23.5/BepInEx_win_x64_5.4.23.5.zip",
+          "sha256": "82f9878551030f54657792c0740d9d51a09500eeae1fba21106b0c441e6732c4"
+        }
+      ]
+    }
+  }
+}
