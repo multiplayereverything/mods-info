@@ -1,0 +1,92 @@
+# Keeps releases.json (and releases-seen.json) up to date: the newest GitHub release of every team PC mod.
+# The launcher reads releases.json from the mods-info zip so it does not have to ask api.github.com itself.
+#
+# Safety: runs only on a timer or by hand (never on pull requests), uses no third-party actions, and has no stored secret:
+# it uses the run's own GITHUB_TOKEN. The script is tools/build_releases.py (Python standard library only).
+name: releases
+
+on:
+  schedule:
+    # Every 10 minutes, off the top of the hour (GitHub delays runs that start at minute 0).
+    - cron: "7,17,27,37,47,57 * * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: releases
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Get the repository
+        run: |
+          git clone --quiet "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" repo
+          cd repo
+          git config user.name "releases bot"
+          git config user.email "releases-bot@users.noreply.github.com"
+
+      - name: Build releases.json
+        id: build
+        working-directory: repo
+        run: |
+          set +e
+          python3 tools/build_releases.py --root . 2>&1 | tee ../build.log
+          echo "code=${PIPESTATUS[0]}" >> "$GITHUB_OUTPUT"
+
+      - name: Commit when something changed
+        working-directory: repo
+        run: |
+          git add releases.json releases-seen.json
+          if git diff --cached --quiet; then echo "nothing to commit"; exit 0; fi
+          git commit --quiet -m "Update releases.json"
+          # The dashboard also writes to main: on a rejected push, take its commits first (our files are only written here).
+          for i in 1 2 3 4 5; do
+            git push --quiet origin HEAD:main && exit 0
+            git pull --rebase --quiet origin main
+          done
+          echo "could not push after 5 tries"; exit 1
+
+      - name: Tell the owner when something needs a look
+        if: always() && steps.build.outputs.code != '0'
+        env:
+          GH_REPO: ${{ github.repository }}
+        run: |
+          title="Release data needs a look"
+          open=$(gh issue list --state open --search "in:title $title" --json number --jq '.[0].number')
+          if [ -n "$open" ]; then
+            # An issue is already open. Standing problems stay quiet, but a HASH CHANGED for a key the issue has not
+            # mentioned yet is new: comment on the issue and fail this run so the owner hears about it.
+            known=$(gh issue view "$open" --json body,comments --jq '.body, (.comments[].body)')
+            fresh=""
+            while IFS= read -r key; do
+              [ -n "$key" ] || continue
+              printf '%s' "$known" | grep -qF -- "$key" || fresh="${fresh} ${key}"
+            done < <(grep -o 'HASH CHANGED for [^ ]*' build.log | sed 's/^HASH CHANGED for //; s/:$//' | sort -u)
+            if [ -n "$fresh" ]; then
+              { echo "A different hash changed:"; echo; echo '```'; printf '%s' "$fresh"; echo '```'; echo; echo '```'; cat build.log; echo '```'; } > body.md
+              gh issue comment "$open" --body-file body.md
+              exit 1
+            fi
+            echo "issue #$open is still open; nothing new to report"; exit 0
+          fi
+          {
+            echo "The releases job reported a problem. The other mods were still updated."
+            echo
+            echo '```'; cat build.log; echo '```'
+            echo
+            echo "If a HASH CHANGED line is there: check the file in that mod's release is the real one. If it is,"
+            echo "remove that key from releases-seen.json to accept the new hash. If it is not, the release was tampered with."
+            echo "Close this issue when it is dealt with; the job opens a new one if the problem is still there."
+          } > body.md
+          gh issue create --title "$title" --body-file body.md
+          # Fail this one run so it shows red in the Actions list.
+          exit 1
