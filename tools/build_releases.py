@@ -66,27 +66,23 @@ def is_ours(repo):
 
 
 def load_records(root):
-    """(folder, [records]) from records/ once it lists mods, otherwise from team/."""
+    """The records listed in records/index.json (the only folder with mods), or [] when it lists none."""
     idx = read_json(os.path.join(root, "records", "index.json"))
-    if idx and idx.get("mods"):
-        folder, ids = "records", idx["mods"]
-    else:
-        folder, ids = "team", (read_json(os.path.join(root, "team", "index.json"), {}) or {}).get("mods", [])
     out = []
-    for i in ids:
-        r = read_json(os.path.join(root, folder, i + ".json"))
+    for i in (idx or {}).get("mods", []):
+        r = read_json(os.path.join(root, "records", i + ".json"))
         if r:
             out.append(r)
-    return folder, out
+    return out
 
 
-def team_rule(rec, folder):
-    """None when the record is not ours (skip quietly in records/, where developers' records live), or an error text when
-    it claims to be ours but breaks the rules, or True when it is ours and fine."""
+def team_rule(rec):
+    """None when the record is not ours (developers' records live in records/ too: skip them quietly), or an error text when
+    it is ours but breaks the rules, or True when it is ours and fine."""
     pkg = (rec.get("mod") or {}).get("package") or {}
     repo = rec.get("repo")
     if not is_ours(repo):
-        return f"{rec.get('id')}: in team/ but its repo is {repo!r}, not {OWNER}/..." if folder == "team" else None
+        return None
     if not pkg.get("github") or pkg.get("url"):
         return None  # a Flash game or a pinned download: nothing to look up
     if str(pkg["github"]).lower() != str(repo).lower():
@@ -176,10 +172,14 @@ def build(root, fetch=http_fetch, when=None):
     old = read_json(os.path.join(root, "releases.json"), {}) or {}
     old_mods = old.get("mods", {})
     seen = read_json(os.path.join(root, "releases-seen.json"), {}) or {}
-    folder, records = load_records(root)
+    records = load_records(root)
     mods, problems, notes, failed = {}, [], [], []
+    if not records:
+        # Never publish an empty list because records/ could not be read: leave the file as it is and say so.
+        return old or {"format": 1, "checkedAt": None, "mods": {}}, read_json(os.path.join(root, "releases-seen.json"), {}) or {}, False, False, \
+            ["records/index.json lists no mods; releases.json was left as it is"], []
     for rec in records:
-        rule = team_rule(rec, folder)
+        rule = team_rule(rec)
         if rule is not True:
             if rule:
                 problems.append(rule)
