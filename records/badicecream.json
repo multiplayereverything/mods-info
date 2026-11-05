@@ -4,7 +4,7 @@
   "platform": "flash",
   "author": "Multiplayer Everything",
   "minLauncher": "1.0.42",
-  "approved_at": "2026-11-04",
+  "approved_at": "2026-11-05",
   "approved_by": "Multiplayer Everything Team",
   "name": "Bad Ice-Cream",
   "players": "1-2 players (online co-op)",
@@ -51,7 +51,9 @@
         "--coop-host-relay",
         "${SERVER}",
         "--coop-name",
-        "${PLAYER_NAME}"
+        "${PLAYER_NAME}",
+        "--coop-players",
+        "2"
       ],
       "joinArgs": [
         "--coop-join-relay",
@@ -76,7 +78,9 @@
         "--coop-host",
         "7790",
         "--coop-name",
-        "${PLAYER_NAME}"
+        "${PLAYER_NAME}",
+        "--coop-players",
+        "2"
       ]
     },
     {
