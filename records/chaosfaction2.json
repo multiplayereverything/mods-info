@@ -1,0 +1,67 @@
+{
+  "id": "chaosfaction2",
+  "repo": "multiplayereverything/flash-games",
+  "platform": "flash",
+  "author": "Multiplayer Everything",
+  "minLauncher": "1.0.43",
+  "approved_at": "2026-11-04",
+  "approved_by": "Multiplayer Everything Team",
+  "name": "Chaos Faction 2",
+  "players": "2-6 players (online)",
+  "maxPlayers": 6,
+  "online": {
+    "id": "ruffle-coop",
+    "join": "online"
+  },
+  "categories": [
+    "flash",
+    "online",
+    "versus"
+  ],
+  "guide": {
+    "steps": [
+      "Press Play online. A message shows your room code; send it to your friend. For three to six players use Host a room for 3 (up to 6) players under Other ways to connect: the game starts once everyone has joined.",
+      "Your friends type the code in Join by code, or pick your room in the Rooms list.",
+      "The host clicks through the menus and picks Deathmatch; player 2 is already Keyboard 2, and players 3 to 6 take the next fighters (their cards still say CPU, but in the match each is its player's, with their name over it). Deathmatch for 2-6 players; Campaign with friends for 1-6 (the host picks the level; friends fight next to player 1). Survival is single-player."
+    ],
+    "keys": [
+      {
+        "key": "Arrows",
+        "does": "Move, jump and shield."
+      },
+      {
+        "key": "Z and X",
+        "does": "Attack."
+      },
+      {
+        "key": "D",
+        "does": "Drop your weapon."
+      },
+      {
+        "key": "Shift",
+        "does": "Punch while holding a weapon."
+      },
+      {
+        "key": "T",
+        "does": "Taunt."
+      },
+      {
+        "key": "Space (host)",
+        "does": "Pause."
+      }
+    ],
+    "tips": [
+      "Everyone plays on their own PC with the same keys; the host's mouse runs the menus, and each friend clicks only their own card.",
+      "Everyone needs the same Ruffle Together build and game file; the launcher keeps them current."
+    ]
+  },
+  "color": "#B0302A",
+  "colorEnd": "#2A0F0F",
+  "description": "A brawler with weapons, taunts and shields. Online play runs in Ruffle Together: two to six fighters, one per PC, in Deathmatch, or the campaign together with everyone on player 1's side.",
+  "flash": {
+    "file": "${GAMES_DIR}\\ChaosFaction2_online.swf",
+    "keys": "chaos-faction-2",
+    "maxPlayers": 6,
+    "offline": {}
+  }
+}

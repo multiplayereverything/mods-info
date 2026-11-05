@@ -1,0 +1,167 @@
+{
+  "id": "cupheads",
+  "repo": "multiplayereverything/CupHeads",
+  "platform": "pc",
+  "author": "Multiplayer Everything",
+  "minLauncher": "1.0.42",
+  "approved_at": "2026-11-04",
+  "approved_by": "Multiplayer Everything Team",
+  "name": "CupHeads",
+  "site": "cuphead",
+  "players": "2 players (co-op)",
+  "categories": [
+    "pc",
+    "coop"
+  ],
+  "guide": {
+    "needs": [
+      "Your own copy of Cuphead on Steam. Ms. Chalice needs the DLC on both PCs.",
+      "Two different Steam accounts to play online over Steam (one account can't connect to itself).",
+      "Everyone you play with needs the same version of the mod. The launcher keeps yours up to date."
+    ],
+    "steps": [
+      "Press Install. The launcher finds your copy of Cuphead and puts the mod, and the BepInEx loader it needs, in it.",
+      "Press Launch. MULTIPLAYER appears in the main menu.",
+      "The host picks MULTIPLAYER, HOST A GAME, then INVITE A FRIEND. The friend accepts the Steam invite, even with Cuphead closed.",
+      "No Steam? The host picks HOST ON LAN and COPY LOBBY CODE; the friend copies that address and picks JOIN A GAME (TCP port 27140).",
+      "The host plays Player One and owns the save; the guest plays Player Two on a live copy of the host's save."
+    ],
+    "keys": [
+      {
+        "key": "F1",
+        "does": "Shows the shortcuts card."
+      },
+      {
+        "key": "F6",
+        "does": "Quick resync."
+      },
+      {
+        "key": "F9",
+        "does": "Copies diagnostics for a bug report."
+      }
+    ],
+    "tips": [
+      "The guest's own save files are not written during a session; they are backed up first.",
+      "Three or more players is experimental."
+    ],
+    "links": [
+      {
+        "label": "CupHeads on GitHub",
+        "url": "https://github.com/multiplayereverything/CupHeads"
+      },
+      {
+        "label": "Original CupHeads by Germanized",
+        "url": "https://github.com/Germanized/CupHeads"
+      },
+      {
+        "label": "Multiplayer Everything Discord",
+        "url": "https://discord.com/invite/P2MSSUf5GX"
+      }
+    ]
+  },
+  "color": "#D9A21B",
+  "colorEnd": "#3A2A07",
+  "description": "Online co-op for Cuphead: both cups, the host's save, bosses, run-and-gun and plane levels and the world map, over Steam invites or LAN. Originally made by Germanized; this fork is maintained by Multiplayer Everything. Everyone needs the same version.",
+  "mod": {
+    "id": "cupheads",
+    "game": {
+      "name": "Cuphead",
+      "executable": "Cuphead.exe",
+      "steamAppId": "268910",
+      "validationFiles": [
+        "${GAME_EXE}",
+        "Cuphead_Data"
+      ],
+      "processNames": [
+        "Cuphead.exe"
+      ],
+      "detection": [
+        {
+          "type": "path",
+          "path": "${folder:ProgramFilesX86}\\Steam\\steamapps\\common\\Cuphead"
+        },
+        {
+          "type": "steam",
+          "appId": "268910",
+          "installDir": "Cuphead"
+        }
+      ]
+    },
+    "install": {
+      "targetDir": "${GAME_DIR}\\BepInEx\\plugins\\CupheadOnline",
+      "stateDir": "${INSTALL_DIR}\\.installer",
+      "uninstallCleanupWith": "loader",
+      "uninstallCleanup": [
+        "BepInEx/cache/**",
+        "BepInEx/patchers/**",
+        "BepInEx/config/BepInEx.cfg",
+        "BepInEx/LogOutput.log",
+        "BepInEx/ErrorLog.log"
+      ]
+    },
+    "components": [
+      {
+        "id": "loader",
+        "name": "BepInEx mod loader",
+        "source": "loader/BepInEx/core",
+        "target": "${GAME_DIR}\\BepInEx\\core",
+        "skipIfPresent": [
+          "BepInEx/core"
+        ],
+        "required": true
+      },
+      {
+        "id": "loader-winhttp",
+        "name": "BepInEx mod loader",
+        "source": "loader/winhttp.dll",
+        "target": "${GAME_DIR}",
+        "skipIfPresent": [
+          "BepInEx/core"
+        ],
+        "required": true
+      },
+      {
+        "id": "loader-doorstop",
+        "name": "BepInEx mod loader",
+        "source": "loader/doorstop_config.ini",
+        "target": "${GAME_DIR}",
+        "skipIfPresent": [
+          "BepInEx/core"
+        ],
+        "required": true
+      },
+      {
+        "id": "loader-version",
+        "name": "BepInEx mod loader",
+        "source": "loader/.doorstop_version",
+        "target": "${GAME_DIR}",
+        "skipIfPresent": [
+          "BepInEx/core"
+        ],
+        "required": true
+      },
+      {
+        "id": "mod",
+        "name": "CupHeads",
+        "source": "BepInEx/plugins/CupheadOnline",
+        "required": true
+      }
+    ],
+    "launch": {
+      "uri": "steam://rungameid/${STEAM_APP_ID}",
+      "hint": "In the main menu open MULTIPLAYER: host a game and invite a friend, or join one."
+    },
+    "package": {
+      "github": "multiplayereverything/CupHeads",
+      "asset": "CupHeads-BepInEx-*.zip",
+      "extras": [
+        {
+          "dir": "loader",
+          "github": "multiplayereverything/CupHeads",
+          "tag": "bepinex-5.4.23.5",
+          "asset": "BepInEx_win_x64_5.4.23.5.zip"
+        }
+      ]
+    }
+  }
+}

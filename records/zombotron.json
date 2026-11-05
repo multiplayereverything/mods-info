@@ -1,0 +1,145 @@
+{
+  "id": "zombotron",
+  "repo": "multiplayereverything/flash-games",
+  "platform": "flash",
+  "author": "Multiplayer Everything",
+  "minLauncher": "1.0.43",
+  "approved_at": "2026-11-04",
+  "approved_by": "Multiplayer Everything Team",
+  "name": "Zombotron",
+  "players": "1-4 players (online co-op)",
+  "maxPlayers": 4,
+  "online": {
+    "id": "ruffle-coop",
+    "join": "online"
+  },
+  "categories": [
+    "flash",
+    "online",
+    "coop"
+  ],
+  "settings": [
+    {
+      "id": "camera",
+      "type": "choice",
+      "scope": "host",
+      "label": "Camera",
+      "since": "1.0.3.7",
+      "default": "split",
+      "choices": [
+        {
+          "id": "split",
+          "label": "Own camera each",
+          "args": []
+        },
+        {
+          "id": "team",
+          "label": "One team camera",
+          "args": [
+            "--coop-option",
+            "camera=team"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "zoom",
+      "type": "choice",
+      "scope": "host",
+      "label": "Zoom",
+      "since": "1.0.3.7",
+      "default": "normal",
+      "choices": [
+        {
+          "id": "normal",
+          "label": "Normal",
+          "args": []
+        },
+        {
+          "id": "wide",
+          "label": "Wide (see more)",
+          "args": [
+            "--coop-option",
+            "zoom=0.75"
+          ]
+        },
+        {
+          "id": "close",
+          "label": "Close",
+          "args": [
+            "--coop-option",
+            "zoom=1.25"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "friendlyfire",
+      "type": "checkbox",
+      "scope": "host",
+      "label": "Friendly fire",
+      "since": "1.0.3.7",
+      "args": [
+        "--coop-option",
+        "friendlyfire=1"
+      ]
+    },
+    {
+      "id": "bump",
+      "type": "checkbox",
+      "scope": "host",
+      "label": "Players bump into each other",
+      "since": "1.0.3.7",
+      "args": [
+        "--coop-option",
+        "bump=1"
+      ]
+    }
+  ],
+  "guide": {
+    "steps": [
+      "Press Play online. A message shows your room code; send it to your friend. For three or four players use Host a room for 3 or 4 players under Other ways to connect: the game starts once everyone has joined.",
+      "Your friends type the code in Join by code, or pick your room in the Rooms list.",
+      "The host picks a level in the menus and presses Space to start a loaded level."
+    ],
+    "keys": [
+      {
+        "key": "A D or the arrows",
+        "does": "Walk."
+      },
+      {
+        "key": "W, Up or Space",
+        "does": "Jump."
+      },
+      {
+        "key": "Your mouse",
+        "does": "Aim and shoot."
+      },
+      {
+        "key": "S, Down, E or F",
+        "does": "Use doors, buttons, chests, shops and weapons."
+      },
+      {
+        "key": "R, Q, H",
+        "does": "Reload, switch weapon, use an aidkit."
+      }
+    ],
+    "tips": [
+      "Everyone plays on their own PC with their own camera, keys and mouse; only the host's mouse works in the menus.",
+      "The host can pick the camera, zoom and friendly fire before hosting.",
+      "Everyone needs the same Ruffle Together build and game file; the launcher keeps them current."
+    ]
+  },
+  "color": "#6E8F3A",
+  "colorEnd": "#1F2A12",
+  "description": "Zombotron (Ant Karlov, 2011): blast zombies and robots through 10 levels with up to 4 friends, each with their own camera, keys and mouse.",
+  "flash": {
+    "file": "${GAMES_DIR}\\Zombotron_online.swf",
+    "keys": "gun-mayhem-2",
+    "maxPlayers": 4,
+    "offline": {
+      "keys": "zombotron-solo",
+      "label": "Play solo"
+    }
+  }
+}

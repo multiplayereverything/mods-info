@@ -1,0 +1,43 @@
+{
+  "id": "smileyswar",
+  "repo": "multiplayereverything/flash-games",
+  "platform": "flash",
+  "author": "Multiplayer Everything",
+  "minLauncher": "1.0.43",
+  "approved_at": "2026-11-04",
+  "approved_by": "Multiplayer Everything Team",
+  "name": "Smileys War",
+  "players": "2-4 players (online)",
+  "maxPlayers": 4,
+  "online": {
+    "id": "ruffle-coop",
+    "join": "online"
+  },
+  "categories": [
+    "flash",
+    "online",
+    "versus"
+  ],
+  "guide": {
+    "steps": [
+      "Press Play online. A message shows your room code; send it to your friend. For three or four players use Host a room for 3 or 4 players under Other ways to connect: the game starts once everyone has joined.",
+      "Your friends type the code in Join by code, or pick your room in the Rooms list.",
+      "On the Arena screen the host picks HUMANS (2 to 4), then starts the match."
+    ],
+    "tips": [
+      "Each player takes one of the game's smileys in place of a bot and aims with their own mouse.",
+      "Everyone needs the same Ruffle Together build and game file; the launcher keeps them current."
+    ]
+  },
+  "color": "#F2B632",
+  "colorEnd": "#9A4B12",
+  "description": "A smiley-face shooter arena. Online play runs in Ruffle Together: two to four players take the place of bots, each with their own keys and mouse.",
+  "flash": {
+    "file": "${GAMES_DIR}\\SmileysWar_online.swf",
+    "keys": "smileys-war",
+    "maxPlayers": 4,
+    "offline": {
+      "label": "Play solo"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "id": "fireboywatergirlforesttemple",
+  "repo": "multiplayereverything/flash-games",
+  "platform": "flash",
+  "author": "Multiplayer Everything",
+  "minLauncher": "1.0.43",
+  "approved_at": "2026-11-04",
+  "approved_by": "Multiplayer Everything Team",
+  "name": "Fireboy & Watergirl: The Forest Temple",
+  "players": "2 players (online co-op)",
+  "maxPlayers": 2,
+  "online": {
+    "id": "ruffle-coop",
+    "join": "online"
+  },
+  "categories": [
+    "flash",
+    "online",
+    "coop"
+  ],
+  "guide": {
+    "steps": [
+      "Press Play online. A message shows your room code; send it to your friend. The game starts once they have joined.",
+      "Your friend types the code in Join by code, or picks your room in the Rooms list.",
+      "The host is Fireboy and the friend is Watergirl. The host clicks the menus and the level map."
+    ],
+    "keys": [
+      {
+        "key": "Arrows or W A D",
+        "does": "Move (Up jumps)."
+      },
+      {
+        "key": "P or Esc",
+        "does": "Pause (not available in online play)."
+      }
+    ],
+    "tips": [
+      "Fire kills Watergirl, water kills Fireboy, green goo kills both. Collect the gems and reach both doors.",
+      "Everyone needs Ruffle Together 1.0.3.7 or newer; the launcher keeps it current."
+    ]
+  },
+  "color": "#C8501E",
+  "colorEnd": "#1F6E8C",
+  "description": "Fireboy and Watergirl in The Forest Temple (Oslo Albet, Armor Games 2009): the game's own two-player co-op, online. Fireboy and Watergirl work together through 32 temple levels, and each player is on their own PC.",
+  "flash": {
+    "file": "${GAMES_DIR}\\FireboyWatergirlForestTemple_online.swf",
+    "keys": "fireboy-watergirl",
+    "maxPlayers": 2,
+    "offline": {
+      "label": "Play on one keyboard",
+      "description": "Both players on this PC"
+    }
+  }
+}

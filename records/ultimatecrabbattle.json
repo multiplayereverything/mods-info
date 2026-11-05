@@ -1,0 +1,49 @@
+{
+  "id": "ultimatecrabbattle",
+  "repo": "multiplayereverything/flash-games",
+  "platform": "flash",
+  "author": "Multiplayer Everything",
+  "minLauncher": "1.0.43",
+  "approved_at": "2026-11-04",
+  "approved_by": "Multiplayer Everything Team",
+  "name": "Ultimate Crab Battle",
+  "players": "1-4 players (online co-op)",
+  "maxPlayers": 4,
+  "online": {
+    "id": "ruffle-coop",
+    "join": "online"
+  },
+  "categories": [
+    "flash",
+    "online",
+    "coop"
+  ],
+  "guide": {
+    "steps": [
+      "Press Play online. A message shows your room code; send it to your friend. For three or four players use Host a room for 3 or 4 players under Other ways to connect: the game starts once everyone has joined.",
+      "Your friends type the code in Join by code, or pick your room in the Rooms list.",
+      "Friends join the fight by pressing fire on the difficulty menu."
+    ],
+    "tips": [
+      "Up to four ships against the same crab, sharing one HP bar.",
+      "Everyone needs the same Ruffle Together build and game file; the launcher keeps them current."
+    ]
+  },
+  "color": "#E8603C",
+  "colorEnd": "#1D3C6E",
+  "description": "One giant crab, up to four ships. Online play runs in Ruffle Together: every player flies their own ship, and the team shares one HP bar.",
+  "flash": {
+    "file": "${GAMES_DIR}\\UltimateCrabBattle_online.swf",
+    "keys": "ultimate-crab-battle",
+    "maxPlayers": 4,
+    "original": {
+      "files": [
+        "${GAMES_DIR}\\483854_ucb.swf",
+        "${folder:Desktop}\\AIStuff\\ai-work-flash-games\\Ultimate Crab Battle\\483854_ucb.swf"
+      ]
+    },
+    "offline": {
+      "description": "The fight on your own"
+    }
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "dadnme",
+  "repo": "multiplayereverything/flash-games",
+  "platform": "flash",
+  "author": "Multiplayer Everything",
+  "minLauncher": "1.0.43",
+  "approved_at": "2026-11-04",
+  "approved_by": "Multiplayer Everything Team",
+  "name": "Dad 'n Me",
+  "players": "1-4 players (online co-op)",
+  "maxPlayers": 4,
+  "online": {
+    "id": "ruffle-coop",
+    "join": "online"
+  },
+  "categories": [
+    "flash",
+    "online",
+    "coop"
+  ],
+  "settings": [
+    {
+      "id": "friendlyfire",
+      "type": "checkbox",
+      "scope": "host",
+      "label": "Friendly fire",
+      "since": "1.0.3.7",
+      "args": [
+        "--coop-option",
+        "friendlyfire=1"
+      ]
+    }
+  ],
+  "guide": {
+    "steps": [
+      "Press Play online. A message shows your room code; send it to your friend. For three or four players use Host a room for 3 or 4 players under Other ways to connect: the game starts once everyone has joined.",
+      "Your friends type the code in Join by code, or pick your room in the Rooms list.",
+      "Press A (or the host clicks) to get through the menus: PLAY, START, PLAY AGAIN."
+    ],
+    "keys": [
+      {
+        "key": "Arrows",
+        "does": "Move (double-tap to dash)."
+      },
+      {
+        "key": "A",
+        "does": "Punch. Also works in the menus."
+      },
+      {
+        "key": "S",
+        "does": "Second punch."
+      }
+    ],
+    "tips": [
+      "Everyone uses these keys on their own PC, and A works in the menus.",
+      "Everyone needs the same Ruffle Together build and game file; the launcher keeps them current."
+    ]
+  },
+  "color": "#D9822B",
+  "colorEnd": "#5A2E1A",
+  "description": "A father-and-son brawler. Online play runs in Ruffle Together: up to four players fight side by side, one per PC.",
+  "flash": {
+    "file": "${GAMES_DIR}\\DadNMe_online.swf",
+    "keys": "gun-mayhem-2",
+    "maxPlayers": 4,
+    "offline": {
+      "keys": "dad-n-me-solo",
+      "label": "Play solo"
+    }
+  }
+}

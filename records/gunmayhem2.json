@@ -1,0 +1,71 @@
+{
+  "id": "gunmayhem2",
+  "repo": "multiplayereverything/flash-games",
+  "platform": "flash",
+  "author": "Multiplayer Everything",
+  "minLauncher": "1.0.43",
+  "approved_at": "2026-11-04",
+  "approved_by": "Multiplayer Everything Team",
+  "name": "Gun Mayhem 2: More Mayhem",
+  "players": "1-4 players",
+  "maxPlayers": 4,
+  "online": {
+    "id": "ruffle-coop",
+    "join": "online"
+  },
+  "categories": [
+    "flash",
+    "online",
+    "local",
+    "versus"
+  ],
+  "guide": {
+    "steps": [
+      "Press Play online. A message shows your room code; send it to your friend. For three or four players use Host a room for 3 or 4 players under Other ways to connect: the game starts once everyone has joined.",
+      "Your friends type the code in Join by code, or pick your room in the Rooms list.",
+      "The host sets up Custom Game with the friends as HUMAN players, then starts the match."
+    ],
+    "keys": [
+      {
+        "key": "Arrows or W A S D",
+        "does": "Move and jump."
+      },
+      {
+        "key": "Z or T",
+        "does": "Shoot."
+      },
+      {
+        "key": "X or Y",
+        "does": "Throw a grenade."
+      }
+    ],
+    "tips": [
+      "The host is Player 1 and only the host's mouse works in the menus.",
+      "Esc and Space (pause) are turned off in online play.",
+      "Everyone needs the same Ruffle Together build and game file; the launcher keeps them current.",
+      "Play on one keyboard (up to four players) is under Other ways to connect, once Settings shows offline play."
+    ]
+  },
+  "color": "#FF6A3D",
+  "colorEnd": "#B4234E",
+  "image": "covers\\gunmayhem2.png",
+  "imageFocus": 0.1,
+  "description": "Knock each other off floating platforms with guns, in free-for-all or team matches against friends and bots. Online play runs in Ruffle Together: the host is Player 1 and friends join as Players 2, 3 and 4.",
+  "flash": {
+    "file": "${GAMES_DIR}\\gunmayhem2_online.swf",
+    "keys": "gun-mayhem-2",
+    "maxPlayers": 4,
+    "original": {
+      "files": [
+        "${GAMES_DIR}\\gunmayhem2.swf",
+        "${folder:Desktop}\\AIStuff\\ai-work-flash-games\\gunmayhem2\\content\\cache.armorgames.com\\files\\games\\gun-mayhem-2-more-ma-13824.swf",
+        "${FLASHPOINT}\\Data\\Games\\gunmayhem2\\content\\cache.armorgames.com\\files\\games\\gun-mayhem-2-more-ma-13824.swf",
+        "${FLASHPOINT}\\Data\\Games\\gm2-mod\\work\\gm2_orig.swf"
+      ],
+      "description": "The Armor Games release, without the online mod"
+    },
+    "offline": {
+      "local": true
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "little-nightmares-coop",
+  "repo": "vladimirwoxi/little-nightmares-1-coop",
+  "platform": "pc",
+  "author": "vladimirwoxi",
+  "tag": "v0.7.1",
+  "version": "0.7.1",
+  "asset": "AtlasCoop-v0.7.1-with-UE4SS.zip",
+  "url": "https://github.com/vladimirwoxi/little-nightmares-1-coop/releases/download/v0.7.1/AtlasCoop-v0.7.1-with-UE4SS.zip",
+  "sha256": "f353fb2a9d67e2a6ecd573ca3064c50d0e024a44d43a8473b2adcd02547a1e47",
+  "authorUrl": "https://github.com/vladimirwoxi",
+  "approved_at": "2026-11-04",
+  "approved_by": "Multiplayer Everything Team",
+  "description": "Split-screen co-op for Little Nightmares (2017) Enhanced Edition by vladimirwoxi: two players on one PC, two gamepads, one half of the screen each. Not online. Made by vladimirwoxi, not by us.",
+  "players": "2 players (same PC)",
+  "color": "#8A7A2B",
+  "colorEnd": "#241F0A",
+  "guide": {
+    "needs": [
+      "Your own copy of Little Nightmares (2017) Enhanced Edition. The mod was tested on one non-Steam copy only; a Steam copy may not work.",
+      "Two XInput gamepads connected to the same PC, before the game starts."
+    ],
+    "steps": [
+      "Press Install. The launcher puts the UE4SS mod loader and the mod next to Atlas-Win64-Shipping.exe.",
+      "Plug in both gamepads, then press Launch.",
+      "Co-op is on from the start: the second player appears at the main menu and the screen splits in two. A row in the main menu turns it off and on."
+    ],
+    "tips": [
+      "This is split-screen on one PC. There is no online play.",
+      "It is a prototype tested in windowed mode only. Known problems: both players grabbing the same hook can crash the game, and a closing door can leave player 2 behind.",
+      "If the players have swapped gamepads, restart the game."
+    ]
+  },
+  "mod": {
+    "id": "little-nightmares-coop",
+    "publisher": "vladimirwoxi",
+    "website": "https://github.com/vladimirwoxi/little-nightmares-1-coop",
+    "game": {
+      "name": "Little Nightmares",
+      "executable": "Atlas-Win64-Shipping.exe",
+      "steamAppId": "424840",
+      "validationFiles": [
+        "${GAME_EXE}"
+      ],
+      "processNames": [
+        "Atlas-Win64-Shipping.exe"
+      ],
+      "detection": [
+        {
+          "type": "steam",
+          "appId": "424840",
+          "installDir": "Little Nightmares",
+          "subPath": "Atlas\\Binaries\\Win64"
+        },
+        {
+          "type": "path",
+          "path": "${folder:ProgramFilesX86}\\Steam\\steamapps\\common\\Little Nightmares\\Atlas\\Binaries\\Win64"
+        }
+      ]
+    },
+    "install": {
+      "targetDir": "${GAME_DIR}\\ue4ss"
+    },
+    "components": [
+      {
+        "id": "loader",
+        "name": "UE4SS mod loader",
+        "source": "dwmapi.dll",
+        "target": "${GAME_DIR}",
+        "required": true
+      },
+      {
+        "id": "ue4ss",
+        "name": "UE4SS and the co-op mod",
+        "source": "ue4ss",
+        "required": true
+      }
+    ],
+    "launch": {
+      "uri": "steam://rungameid/${STEAM_APP_ID}",
+      "hint": "Plug in both gamepads before the game starts. The second player appears at the main menu."
+    }
+  }
+}

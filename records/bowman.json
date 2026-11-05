@@ -1,0 +1,63 @@
+{
+  "id": "bowman",
+  "repo": "multiplayereverything/flash-games",
+  "platform": "flash",
+  "author": "Multiplayer Everything",
+  "minLauncher": "1.0.43",
+  "approved_at": "2026-11-04",
+  "approved_by": "Multiplayer Everything Team",
+  "name": "Bow Man",
+  "players": "2 players (online)",
+  "maxPlayers": 2,
+  "online": {
+    "id": "ruffle-coop",
+    "join": "online"
+  },
+  "categories": [
+    "flash",
+    "online",
+    "versus"
+  ],
+  "guide": {
+    "steps": [
+      "Press Play online. A message shows your room code; send it to your friend. The game starts once they have joined.",
+      "Your friend types the code in Join by code, or picks your room in the Rooms list.",
+      "The host clicks VS Human in the menu. The host is the left archer and the friend is the right archer."
+    ],
+    "keys": [
+      {
+        "key": "W S or the arrows",
+        "does": "Aim."
+      },
+      {
+        "key": "Hold Space, release to shoot",
+        "does": "Draw the bow (Enter or F also work)."
+      },
+      {
+        "key": "Mouse drag",
+        "does": "Aim and shoot with your own mouse."
+      }
+    ],
+    "tips": [
+      "Two archers take turns, each on their own PC; only the host mouse works in the menus.",
+      "Everyone needs the same Ruffle Together build and game file; the launcher keeps them current."
+    ]
+  },
+  "color": "#C98A4B",
+  "colorEnd": "#3B2A1A",
+  "description": "Two archers take turns: drag to aim, release to shoot, mind the wind. Online play runs in Ruffle Together: each archer is on their own PC.",
+  "flash": {
+    "file": "${GAMES_DIR}\\BowMan_online.swf",
+    "keys": "bow-man",
+    "maxPlayers": 2,
+    "original": {
+      "files": [
+        "${GAMES_DIR}\\bowmandash.swf",
+        "${folder:Desktop}\\AIStuff\\ai-work-flash-games\\Bow Man\\bowmandash.swf"
+      ]
+    },
+    "offline": {
+      "description": "VS Computer, practice and bird hunting"
+    }
+  }
+}
