@@ -1,0 +1,77 @@
+{
+  "id": "madnessprojectnexus",
+  "repo": "multiplayereverything/flash-games",
+  "platform": "flash",
+  "author": "Multiplayer Everything",
+  "minLauncher": "1.0.43",
+  "approved_at": "2026-11-05",
+  "approved_by": "Multiplayer Everything Team",
+  "name": "Madness: Project Nexus",
+  "players": "1-4 players (online co-op)",
+  "maxPlayers": 4,
+  "online": {
+    "id": "ruffle-coop",
+    "join": "online"
+  },
+  "categories": [
+    "flash",
+    "online",
+    "coop"
+  ],
+  "guide": {
+    "steps": [
+      "Press Play online. A message shows your room code; send it to your friend. For three or four players use Host a room for 3 or 4 players under Other ways to connect: the game starts once everyone has joined.",
+      "Your friends type the code in Join by code, or pick your room in the Rooms list.",
+      "Click LAUNCH, wait for the menu, then pick Story Mode or Arena Combat and New Game. Friends can click the menus too.",
+      "In Story, click a stage, then PROCEED. In Arena, name your character, click ENTER ARENA, then BEGIN; each friend is in My Squad with their own stats and gear."
+    ],
+    "keys": [
+      {
+        "key": "W A S D or arrows",
+        "does": "Move. Double tap to dash."
+      },
+      {
+        "key": "Mouse",
+        "does": "Aim. Left button fires."
+      },
+      {
+        "key": "Q",
+        "does": "Swap weapon."
+      },
+      {
+        "key": "Space",
+        "does": "Dodge or block. Use doors and panels."
+      },
+      {
+        "key": "R",
+        "does": "Reload."
+      },
+      {
+        "key": "E",
+        "does": "Pick up or throw."
+      },
+      {
+        "key": "Shift",
+        "does": "Bullet time, when the bar has charge."
+      }
+    ],
+    "tips": [
+      "Everyone has their own camera, HUD and aim. Any player can use a door, and it takes the team along.",
+      "If you die you get up after 8 seconds while anyone else is up. If everyone is down, the game spends a life or the mission fails.",
+      "If a friend leaves, their character carries on as an AI teammate. If the host leaves, the game ends."
+    ]
+  },
+  "color": "#B01414",
+  "colorEnd": "#2A0606",
+  "description": "Madness: Project Nexus (Classic) (Michael Swain and Matt \"Krinkels\" Jolly, 2012): fight through the story or the arena with up to 3 friends, each with their own character, camera and mouse.",
+  "flash": {
+    "file": "${GAMES_DIR}\\MadnessProjectNexus_online.swf",
+    "keys": "gun-mayhem-2",
+    "maxPlayers": 4,
+    "offline": {
+      "keys": false,
+      "label": "Play solo"
+    },
+    "ruffle": "1.0.6"
+  }
+}
