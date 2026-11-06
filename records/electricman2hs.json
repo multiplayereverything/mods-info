@@ -57,6 +57,6 @@
     "file": "${GAMES_DIR}\\Electricman2HS_online.swf",
     "keys": "gun-mayhem-2",
     "maxPlayers": 4,
-    "ruffle": "1.0.6"
+    "ruffle": "1.0.7"
   }
 }
