@@ -66,12 +66,12 @@
   "description": "Madness: Project Nexus (Classic) (Michael Swain and Matt \"Krinkels\" Jolly, 2012): fight through the story or the arena with up to 3 friends, each with their own character, camera and mouse.",
   "flash": {
     "file": "${GAMES_DIR}\\MadnessProjectNexus_online.swf",
-    "keys": "gun-mayhem-2",
+    "keys": "stealth-hunter-2",
     "maxPlayers": 4,
     "offline": {
       "keys": false,
       "label": "Play solo"
     },
-    "ruffle": "1.0.6"
+    "ruffle": "1.0.7"
   }
 }
