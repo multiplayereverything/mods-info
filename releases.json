@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "checkedAt": "2026-11-08T15:57:13Z",
+  "checkedAt": "2026-11-09T04:39:13Z",
   "mods": {
     "baldi-together": {
       "repo": "multiplayereverything/baldi-plus-coop",
@@ -85,11 +85,11 @@
     },
     "miside-together": {
       "repo": "multiplayereverything/miside-coop",
-      "tag": "v0.3.15",
-      "version": "0.3.15",
-      "asset": "MiSideTogether-0.3.15.zip",
-      "url": "https://github.com/multiplayereverything/miside-coop/releases/download/v0.3.15/MiSideTogether-0.3.15.zip",
-      "sha256": "55db83255c118a3a675243597387d75ddd329950a7df7107f08605ec53acb768",
+      "tag": "v0.3.16",
+      "version": "0.3.16",
+      "asset": "MiSideTogether-0.3.16.zip",
+      "url": "https://github.com/multiplayereverything/miside-coop/releases/download/v0.3.16/MiSideTogether-0.3.16.zip",
+      "sha256": "87643c0742a48fe7beebd9f35e9bc0f2609bc130e156a961e53645c65ae8a97a",
       "extras": [
         {
           "dir": "loader",
