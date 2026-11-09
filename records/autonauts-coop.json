@@ -1,0 +1,140 @@
+{
+  "id": "autonauts-coop",
+  "repo": "Shocklinks/autonauts-coop",
+  "platform": "pc",
+  "author": "Shocklinks",
+  "tag": "v0.13.0-Beta",
+  "version": "0.13.0",
+  "asset": "AutonautsCoop-0.13.0.zip",
+  "url": "https://github.com/Shocklinks/autonauts-coop/releases/download/v0.13.0-Beta/AutonautsCoop-0.13.0.zip",
+  "sha256": "fbe9bd7087c643bc1b35679636f8d815e478a0bb94f14462d568f85d8e4d0fc3",
+  "authorUrl": "https://github.com/Shocklinks",
+  "approved_at": "2026-11-10",
+  "approved_by": "Multiplayer Everything Team",
+  "description": "Online co-op for Autonauts (Steam) by Shocklinks: build, program bots and research together in one world, joined through Steam invites or by IP. Made by Shocklinks, not by us. Everyone needs the same version.",
+  "players": "2-4 players (online co-op)",
+  "color": "#E8A33D",
+  "colorEnd": "#2A1C08",
+  "guide": {
+    "needs": [
+      "Your own copy of Autonauts on Steam.",
+      "Everyone you play with needs the mod too, and the same version of the mod and the game."
+    ],
+    "steps": [
+      "Press Install. The launcher puts the BepInEx mod loader and the mod next to Autonauts.exe.",
+      "Press Launch.",
+      "Host: load or start a world, press Esc, then Host Multiplayer on the right of the pause screen. Esc then Invite Friends opens the Steam invite window again.",
+      "Join: stay on the main menu and accept the Steam invite. Without Steam: Multiplayer on the main menu, type the host's IP and your name, then tick (the host forwards TCP port 27015)."
+    ],
+    "keys": [
+      {
+        "key": "F8",
+        "does": "Opens the co-op window: port, name, status and Save bug report."
+      },
+      {
+        "key": "F7",
+        "does": "Marks the moment in both players' logs when something goes wrong."
+      }
+    ],
+    "tips": [
+      "It is a beta. Made by Shocklinks, not by Multiplayer Everything: report problems to its author with the F8 bug report zip from both players.",
+      "The host's game speed and pause apply to everyone.",
+      "A joiner can't load a save while connected: go back to the main menu first."
+    ]
+  },
+  "mod": {
+    "id": "autonauts-coop",
+    "publisher": "Shocklinks",
+    "website": "https://github.com/Shocklinks/autonauts-coop",
+    "game": {
+      "name": "Autonauts",
+      "executable": "Autonauts.exe",
+      "steamAppId": "979120",
+      "validationFiles": [
+        "${GAME_EXE}"
+      ],
+      "processNames": [
+        "Autonauts.exe"
+      ],
+      "detection": [
+        {
+          "type": "steam",
+          "appId": "979120",
+          "installDir": "Autonauts"
+        },
+        {
+          "type": "path",
+          "path": "${folder:ProgramFilesX86}\\Steam\\steamapps\\common\\Autonauts"
+        }
+      ]
+    },
+    "install": {
+      "targetDir": "${GAME_DIR}\\BepInEx\\plugins\\AutonautsCoop",
+      "uninstallCleanupWith": "loader",
+      "uninstallCleanup": [
+        "BepInEx/cache/**",
+        "BepInEx/bugreports/**",
+        "BepInEx/config/BepInEx.cfg",
+        "BepInEx/config/autonauts.coop.cfg",
+        "BepInEx/LogOutput.log",
+        "BepInEx/ErrorLog.log",
+        "BepInEx/coop.log",
+        "BepInEx/coop.log.old",
+        "BepInEx/coop_diag.log",
+        "BepInEx/coop_diag.log.old"
+      ]
+    },
+    "components": [
+      {
+        "id": "loader",
+        "name": "BepInEx mod loader",
+        "source": "BepInEx/core",
+        "target": "${GAME_DIR}\\BepInEx\\core",
+        "skipIfPresent": [
+          "BepInEx/core"
+        ],
+        "required": true
+      },
+      {
+        "id": "loader-winhttp",
+        "name": "BepInEx mod loader",
+        "source": "winhttp.dll",
+        "target": "${GAME_DIR}",
+        "skipIfPresent": [
+          "BepInEx/core"
+        ],
+        "required": true
+      },
+      {
+        "id": "loader-doorstop",
+        "name": "BepInEx mod loader",
+        "source": "doorstop_config.ini",
+        "target": "${GAME_DIR}",
+        "skipIfPresent": [
+          "BepInEx/core"
+        ],
+        "required": true
+      },
+      {
+        "id": "loader-version",
+        "name": "BepInEx mod loader",
+        "source": ".doorstop_version",
+        "target": "${GAME_DIR}",
+        "skipIfPresent": [
+          "BepInEx/core"
+        ],
+        "required": true
+      },
+      {
+        "id": "mod",
+        "name": "Autonauts co-op",
+        "source": "BepInEx/plugins/AutonautsCoop.dll",
+        "required": true
+      }
+    ],
+    "launch": {
+      "uri": "steam://rungameid/${STEAM_APP_ID}",
+      "hint": "Load a world, press Esc and pick Host Multiplayer. F8 opens the co-op window."
+    }
+  }
+}
