@@ -1,0 +1,54 @@
+{
+  "id": "theskullkid",
+  "repo": "multiplayereverything/flash-games",
+  "minLauncher": "1.0.43",
+  "approved_at": "2026-11-11",
+  "approved_by": "Multiplayer Everything Team",
+  "author": "Multiplayer Everything",
+  "platform": "flash",
+  "name": "The Skullkid",
+  "players": "1-2 players (online co-op)",
+  "maxPlayers": 2,
+  "online": {
+    "id": "ruffle-coop",
+    "join": "online"
+  },
+  "categories": [
+    "flash",
+    "online",
+    "coop"
+  ],
+  "guide": {
+    "steps": [
+      "Press Play online. A message shows your room code; send it to your friend. The game starts once they have joined.",
+      "Your friends type the code in Join by code, or pick your room in the Rooms list.",
+      "The host clicks the menus. On the first floor each kid walks on their own; from the second floor on you walk as a team."
+    ],
+    "keys": [
+      {
+        "key": "Arrows",
+        "does": "Walk; Up and Down stand and duck on the shootout floor."
+      },
+      {
+        "key": "Space",
+        "does": "Saw or shoot."
+      }
+    ],
+    "tips": [
+      "The two kids share one health bar: losing restarts the floor for both.",
+      "Only the host's mouse works in the menus.",
+      "Everyone needs the same Ruffle Together build and game file; the launcher keeps them current.",
+      "New: not yet played by people on two PCs or over the internet. Tell us how it runs."
+    ]
+  },
+  "color": "#B03030",
+  "colorEnd": "#2A0E0E",
+  "description": "The Skullkid (2002): two masked kids with chainsaws fight their way up an office building, floor by floor, to the boss.",
+  "flash": {
+    "file": "${GAMES_DIR}\\TheSkullkid_online.swf",
+    "keys": "gun-mayhem-2",
+    "maxPlayers": 2,
+    "ruffle": "1.0.8",
+    "offline": {}
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "id": "flashchess",
+  "repo": "multiplayereverything/flash-games",
+  "minLauncher": "1.0.43",
+  "approved_at": "2026-11-11",
+  "approved_by": "Multiplayer Everything Team",
+  "author": "Multiplayer Everything",
+  "platform": "flash",
+  "name": "Flash Chess",
+  "players": "2 players (online)",
+  "maxPlayers": 2,
+  "online": {
+    "id": "ruffle-coop",
+    "join": "online"
+  },
+  "categories": [
+    "flash",
+    "online",
+    "versus"
+  ],
+  "guide": {
+    "steps": [
+      "Press Play online. A message shows your room code; send it to your friend. The game starts once they have joined.",
+      "Your friends type the code in Join by code, or pick your room in the Rooms list.",
+      "The host picks Shallow or Deep on the title screen and clicks RESTART. Only the player whose turn it is can move."
+    ],
+    "keys": [
+      {
+        "key": "Mouse",
+        "does": "Click a piece, then a lit square."
+      },
+      {
+        "key": "Up and Down",
+        "does": "Scroll the move list."
+      }
+    ],
+    "tips": [
+      "If your friend leaves, the computer plays red again.",
+      "New: clicks in real game windows haven't been tested yet, nor two PCs or the internet. Tell us how it runs.",
+      "Everyone needs the same Ruffle Together build and game file; the launcher keeps them current."
+    ]
+  },
+  "color": "#8A8F98",
+  "colorEnd": "#1E2024",
+  "description": "Flash Chess (Digital Vision Multimedia, 2002): play chess against a friend instead of the computer. The host is blue and moves first.",
+  "flash": {
+    "file": "${GAMES_DIR}\\FlashChess_online.swf",
+    "keys": "bow-man",
+    "maxPlayers": 2,
+    "ruffle": "1.0.8",
+    "offline": {}
+  }
+}

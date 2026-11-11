@@ -1,0 +1,62 @@
+{
+  "id": "raze",
+  "repo": "multiplayereverything/flash-games",
+  "minLauncher": "1.0.43",
+  "approved_at": "2026-11-11",
+  "approved_by": "Multiplayer Everything Team",
+  "author": "Multiplayer Everything",
+  "platform": "flash",
+  "name": "Raze",
+  "players": "1-4 players (online co-op)",
+  "maxPlayers": 4,
+  "online": {
+    "id": "ruffle-coop",
+    "join": "online"
+  },
+  "categories": [
+    "flash",
+    "online",
+    "coop"
+  ],
+  "guide": {
+    "steps": [
+      "Press Play online. A message shows your room code; send it to your friends. For three or four players use Host a room for 3 or 4 players under Other ways to connect: the game starts once everyone has joined.",
+      "Your friends type the code in Join by code, or pick your room in the Rooms list.",
+      "The host picks everything in the menus: Quick Match settings or the campaign stage. Friends are on the host's team in campaigns and team modes."
+    ],
+    "keys": [
+      {
+        "key": "WASD or arrows",
+        "does": "Move; jump with W, Up or Space (twice to double jump)."
+      },
+      {
+        "key": "Mouse",
+        "does": "Aim and shoot with your own mouse."
+      },
+      {
+        "key": "R",
+        "does": "Reload."
+      },
+      {
+        "key": "Q or Shift, E or Enter",
+        "does": "Change guns."
+      }
+    ],
+    "tips": [
+      "Only the host can pause and use the end-of-match buttons; saves are the host's.",
+      "Losing the host ends the game.",
+      "Everyone needs the same Ruffle Together build and game file; the launcher keeps them current.",
+      "New: not yet played by people on two PCs or over the internet. Tell us how it runs."
+    ]
+  },
+  "color": "#D04020",
+  "colorEnd": "#2A0E08",
+  "description": "Raze (Armor Games, 2010): a run-and-gun shooter. Up to 4 players fight together in Quick Match and both campaigns, each with their own soldier and camera.",
+  "flash": {
+    "file": "${GAMES_DIR}\\Raze_online.swf",
+    "keys": "gun-mayhem-2",
+    "maxPlayers": 4,
+    "ruffle": "1.0.8",
+    "offline": {}
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "id": "strikeforceheroes",
+  "repo": "multiplayereverything/flash-games",
+  "minLauncher": "1.0.43",
+  "approved_at": "2026-11-11",
+  "approved_by": "Multiplayer Everything Team",
+  "author": "Multiplayer Everything",
+  "platform": "flash",
+  "name": "Strike Force Heroes",
+  "players": "1-4 players (online co-op)",
+  "maxPlayers": 4,
+  "online": {
+    "id": "ruffle-coop",
+    "join": "online"
+  },
+  "categories": [
+    "flash",
+    "online",
+    "coop"
+  ],
+  "guide": {
+    "steps": [
+      "Press Play online. A message shows your room code; send it to your friends. For three or four players use Host a room for 3 or 4 players under Other ways to connect: the game starts once everyone has joined.",
+      "Your friends type the code in Join by code, or pick your room in the Rooms list.",
+      "The host picks the mode and settings with the mouse. Friends get the host's next saved classes, or the mission's class."
+    ],
+    "keys": [
+      {
+        "key": "A and D or arrows",
+        "does": "Move; W, Up or Space jumps; S crouches."
+      },
+      {
+        "key": "Mouse",
+        "does": "Aim and fire with your own mouse."
+      },
+      {
+        "key": "R",
+        "does": "Reload."
+      },
+      {
+        "key": "Q or Shift",
+        "does": "Swap gun; E or Ctrl fires a killstreak."
+      }
+    ],
+    "tips": [
+      "Friends are on the host's team in team modes and the campaign; experience goes to the host's class.",
+      "A friend who leaves stays down, and the match goes on.",
+      "Everyone needs the same Ruffle Together build and game file; the launcher keeps them current.",
+      "New: not yet played by people on two PCs or over the internet. Tell us how it runs."
+    ]
+  },
+  "color": "#3A8040",
+  "colorEnd": "#10241A",
+  "description": "Strike Force Heroes (Sky9 Games, 2012): up to 4 friends fight next to the bots in Quick Match, the campaign and challenges, each with their own soldier, camera and crosshair.",
+  "flash": {
+    "file": "${GAMES_DIR}\\StrikeForceHeroes_online.swf",
+    "keys": "gun-mayhem-2",
+    "maxPlayers": 4,
+    "ruffle": "1.0.8",
+    "offline": {}
+  }
+}
