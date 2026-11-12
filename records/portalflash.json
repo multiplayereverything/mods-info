@@ -44,14 +44,14 @@
     ],
     "tips": [
       "Two players is the game as meant; up to four fit in every chamber.",
-      "The last portal anyone shoots wins: talk to each other.",
+      "A portal can't land on top of another player's: talk to each other.",
       "Everyone needs the same Ruffle Together build and game file; the launcher keeps them current.",
       "New: not yet played by people on two PCs or over the internet. Tell us how it runs."
     ]
   },
   "color": "#E08A20",
   "colorEnd": "#1A2A3A",
-  "description": "Portal: The Flash Version (We Create Stuff, 2007): solve 41 test chambers as a team. Everyone has their own test subject and crosshair; the team shares one blue and one orange portal.",
+  "description": "Portal: The Flash Version (We Create Stuff, 2007): solve 41 test chambers as a team. Everyone has their own test subject, crosshair and pair of portals, and anyone can go through anyone's portals.",
   "flash": {
     "file": "${GAMES_DIR}\\PortalFlash_online.swf",
     "keys": "gun-mayhem-2",
