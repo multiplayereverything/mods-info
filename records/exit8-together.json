@@ -1,0 +1,118 @@
+{
+  "id": "exit8-together",
+  "repo": "multiplayereverything/exit8-coop",
+  "platform": "pc",
+  "author": "Multiplayer Everything",
+  "minLauncher": "1.0.42",
+  "approved_at": "2026-11-14",
+  "approved_by": "Multiplayer Everything Team",
+  "name": "Exit 8 Together",
+  "players": "2-4 players (co-op)",
+  "categories": [
+    "pc",
+    "online",
+    "coop"
+  ],
+  "guide": {
+    "needs": [
+      "Your own copy of The Exit 8 on Steam.",
+      "Everyone you play with needs the same version of the mod. A different version is refused, with both versions named.",
+      "For play over the internet: a VPN such as Tailscale or ZeroTier, or TCP port 27080 forwarded on the host's PC."
+    ],
+    "steps": [
+      "Press Install. The launcher puts the UE4SS mod loader and the mod next to Exit8-Win64-Shipping.exe.",
+      "Open the game folder's Exit8\\Binaries\\Win64\\ue4ss\\Mods\\Exit8Together\\config.txt in a text editor. The host sets mode = host. Friends set mode = join and address = the host's IP address.",
+      "Press Launch on every PC. The game starts through Steam.",
+      "Start a run together. Walk up to the forward exit or the turn-back line to vote: when everyone stands at the same line, you all go that way."
+    ],
+    "tips": [
+      "This is an early test build. It has only been tested with two copies on one PC. Steam lobby play (transport = steam) and the Exit 8 ending are not tested yet.",
+      "There is no in-game menu yet: every setting is in config.txt. Restart the game after editing it.",
+      "Start together: joining a run that has already started isn't handled.",
+      "If anyone is caught, everyone starts over together.",
+      "Each PC still keeps its own save."
+    ],
+    "links": [
+      {
+        "label": "Multiplayer Everything Discord",
+        "url": "https://discord.com/invite/P2MSSUf5GX"
+      }
+    ]
+  },
+  "color": "#8C6D00",
+  "colorEnd": "#1F1A05",
+  "description": "Co-op for The Exit 8 (Steam). Walk the same looping corridor with up to three friends: the same anomalies, the same exit count, and the group votes which way to go. Early test build.",
+  "mod": {
+    "id": "exit8-together",
+    "game": {
+      "name": "The Exit 8",
+      "executable": "Exit8-Win64-Shipping.exe",
+      "steamAppId": "2653790",
+      "validationFiles": [
+        "${GAME_EXE}"
+      ],
+      "processNames": [
+        "Exit8-Win64-Shipping.exe",
+        "Exit8.exe"
+      ],
+      "detection": [
+        {
+          "type": "steam",
+          "appId": "2653790",
+          "installDir": "Exit8",
+          "subPath": "Exit8\\Binaries\\Win64"
+        },
+        {
+          "type": "path",
+          "path": "${folder:ProgramFilesX86}\\Steam\\steamapps\\common\\Exit8\\Exit8\\Binaries\\Win64"
+        }
+      ]
+    },
+    "install": {
+      "targetDir": "${GAME_DIR}\\ue4ss\\Mods\\Exit8Together",
+      "stateDir": "${INSTALL_DIR}\\.installer",
+      "uninstallCleanupWith": "loader",
+      "uninstallCleanup": [
+        "ue4ss/UE4SS.log"
+      ]
+    },
+    "components": [
+      {
+        "id": "loader",
+        "name": "UE4SS mod loader",
+        "source": "loader/ue4ss",
+        "target": "${GAME_DIR}\\ue4ss",
+        "required": true
+      },
+      {
+        "id": "loader-dll",
+        "name": "UE4SS mod loader",
+        "source": "loader/dwmapi.dll",
+        "target": "${GAME_DIR}",
+        "required": true
+      },
+      {
+        "id": "mod",
+        "name": "Exit 8 Together",
+        "source": "ue4ss/Mods/Exit8Together",
+        "required": true
+      }
+    ],
+    "launch": {
+      "uri": "steam://rungameid/${STEAM_APP_ID}",
+      "hint": "Set mode = host or mode = join in the mod's config.txt first. Everyone starts the run together."
+    },
+    "package": {
+      "github": "multiplayereverything/exit8-coop",
+      "asset": "Exit8Together-UE4SS-*.zip",
+      "extras": [
+        {
+          "dir": "loader",
+          "github": "multiplayereverything/exit8-coop",
+          "tag": "ue4ss-4.0.0",
+          "asset": "UE4SS_v4.0.0.zip"
+        }
+      ]
+    }
+  }
+}
