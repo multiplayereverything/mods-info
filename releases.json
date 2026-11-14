@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "checkedAt": "2026-11-13T22:21:12Z",
+  "checkedAt": "2026-11-14T13:52:03Z",
   "mods": {
     "baldi-together": {
       "repo": "multiplayereverything/baldi-plus-coop",
@@ -71,6 +71,24 @@
           "asset": "BepInEx-Unity.IL2CPP-win-x64-6.0.0-be.790.zip",
           "url": "https://github.com/multiplayereverything/Dave-The-Divers-Coop/releases/download/bepinex-6.0.0-be.790/BepInEx-Unity.IL2CPP-win-x64-6.0.0-be.790.zip",
           "sha256": "7e2c83e38db7744d6457839bc869b311aa29a47517938a3a7643be24d00c72ec"
+        }
+      ]
+    },
+    "exit8-together": {
+      "repo": "multiplayereverything/exit8-coop",
+      "tag": "v0.2.0",
+      "version": "0.2.0",
+      "asset": "Exit8Together-UE4SS-0.2.0.zip",
+      "url": "https://github.com/multiplayereverything/exit8-coop/releases/download/v0.2.0/Exit8Together-UE4SS-0.2.0.zip",
+      "sha256": "ae5965946b777833ffe199d19ff8900b71da5eb0d3bbb5a1d88c3d0fb55b41dd",
+      "extras": [
+        {
+          "dir": "loader",
+          "repo": "multiplayereverything/exit8-coop",
+          "tag": "ue4ss-4.0.0",
+          "asset": "UE4SS_v4.0.0.zip",
+          "url": "https://github.com/multiplayereverything/exit8-coop/releases/download/ue4ss-4.0.0/UE4SS_v4.0.0.zip",
+          "sha256": "251ad0d1381a241750e036f5918cbf2b5d7ec58ebc608cb2dd09d459d0c81e45"
         }
       ]
     },
