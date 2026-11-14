@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "checkedAt": "2026-11-14T13:52:03Z",
+  "checkedAt": "2026-11-14T17:10:37Z",
   "mods": {
     "baldi-together": {
       "repo": "multiplayereverything/baldi-plus-coop",
@@ -76,11 +76,11 @@
     },
     "exit8-together": {
       "repo": "multiplayereverything/exit8-coop",
-      "tag": "v0.2.0",
-      "version": "0.2.0",
-      "asset": "Exit8Together-UE4SS-0.2.0.zip",
-      "url": "https://github.com/multiplayereverything/exit8-coop/releases/download/v0.2.0/Exit8Together-UE4SS-0.2.0.zip",
-      "sha256": "ae5965946b777833ffe199d19ff8900b71da5eb0d3bbb5a1d88c3d0fb55b41dd",
+      "tag": "v0.2.1",
+      "version": "0.2.1",
+      "asset": "Exit8Together-UE4SS-0.2.1.zip",
+      "url": "https://github.com/multiplayereverything/exit8-coop/releases/download/v0.2.1/Exit8Together-UE4SS-0.2.1.zip",
+      "sha256": "8e593dc7148b2df6d52e16d55673057056e932a941ff3f44245ee65be07ba7cb",
       "extras": [
         {
           "dir": "loader",
