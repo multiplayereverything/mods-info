@@ -20,7 +20,7 @@
       "For play over the internet: a VPN such as Tailscale or ZeroTier, or TCP port 27080 forwarded on the host's PC."
     ],
     "steps": [
-      "Press Install. The launcher puts the UE4SS mod loader and the mod next to Exit8-Win64-Shipping.exe.",
+      "Press Install. The launcher finds your copy of the game and puts the UE4SS mod loader and the mod next to Exit8-Win64-Shipping.exe. If it asks for the game's folder, pick steamapps\\common\\Exit8\\Exit8\\Binaries\\Win64 (the folder with Exit8-Win64-Shipping.exe), not the top Exit8 folder.",
       "Open the game folder's Exit8\\Binaries\\Win64\\ue4ss\\Mods\\Exit8Together\\config.txt in a text editor. The host sets mode = host. Friends set mode = join and address = the host's IP address.",
       "Press Launch on every PC. The game starts through Steam.",
       "Start a run together. Walk up to the forward exit or the turn-back line to vote: when everyone stands at the same line, you all go that way."
@@ -56,6 +56,12 @@
         "Exit8.exe"
       ],
       "detection": [
+        {
+          "type": "registry",
+          "key": "HKLM\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Uninstall\\Steam App 2653790",
+          "value": "InstallLocation",
+          "subPath": "Exit8\\Binaries\\Win64"
+        },
         {
           "type": "steam",
           "appId": "2653790",
