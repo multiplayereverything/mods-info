@@ -1,6 +1,6 @@
 {
   "format": 1,
-  "checkedAt": "2026-11-17T07:48:05Z",
+  "checkedAt": "2026-11-17T21:25:00Z",
   "mods": {
     "baldi-together": {
       "repo": "multiplayereverything/baldi-plus-coop",
@@ -40,11 +40,11 @@
     },
     "cupheads": {
       "repo": "multiplayereverything/CupHeads",
-      "tag": "v1.7.0",
-      "version": "1.7.0",
-      "asset": "CupHeads-BepInEx-1.7.0.zip",
-      "url": "https://github.com/multiplayereverything/CupHeads/releases/download/v1.7.0/CupHeads-BepInEx-1.7.0.zip",
-      "sha256": "575168f5d3ec23ebc4e6bca1357b878c39f66edd310e836ba41b7a37079b636f",
+      "tag": "v1.7.1",
+      "version": "1.7.1",
+      "asset": "CupHeads-BepInEx-1.7.1.zip",
+      "url": "https://github.com/multiplayereverything/CupHeads/releases/download/v1.7.1/CupHeads-BepInEx-1.7.1.zip",
+      "sha256": "c9862cb5cbb23c19a5e930895984d10352d15440b90d8de2b98d81b20708eb9c",
       "extras": [
         {
           "dir": "loader",
